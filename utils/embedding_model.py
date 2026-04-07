@@ -11,3 +11,8 @@ def load_embedding_model():
 
     from sentence_transformers import SentenceTransformer
     return SentenceTransformer(config.EMBEDDING_MODEL_NAME)
+
+def load_reranker_model():
+    """Loads the cross-encoder model for reranking."""
+    from sentence_transformers import CrossEncoder
+    return CrossEncoder('cross-encoder/ms-marco-MiniLM-L-6-v2')

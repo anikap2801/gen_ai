@@ -26,12 +26,15 @@ def build_index():
     model = load_embedding_model()
     embeddings = model.encode(chunks, show_progress_bar=True)
     
-    # FAISS requires float32 format
+    # Normalize embeddings for cosine similarity
     embeddings_array = np.array(embeddings).astype('float32')
+    norms = np.linalg.norm(embeddings_array, axis=1, keepdims=True)
+    norms[norms == 0] = 1  # Avoid division by zero
+    embeddings_array = embeddings_array / norms
 
     # 3. Create and Save FAISS Index
     dimension = embeddings_array.shape[1]
-    index = faiss.IndexFlatL2(dimension)  # Simple L2 distance for similarity
+    index = faiss.IndexFlatIP(dimension)  # Inner product for cosine similarity (normalized vectors)
     index.add(embeddings_array)
 
     print(f"Saving FAISS index to: {config.FAISS_INDEX_PATH}")
