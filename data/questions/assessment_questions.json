@@ -1,0 +1,1063 @@
+[
+  {
+    "id": "Q_001",
+    "question": "A relation has atomic attributes but contains partial dependencies. Which normal form is it in?",
+    "options": ["1NF", "2NF", "3NF", "BCNF"],
+    "correct_answer": "1NF",
+    "topic": "Normalization Levels",
+    "expected_cognitive_level": "L2"
+  },
+  {
+    "id": "Q_002",
+    "question": "Which of the following situations indicates a violation of 2NF?",
+    "options": [
+      "A non-prime attribute depends on part of a composite key",
+      "A non-prime attribute depends on another non-prime attribute",
+      "All attributes depend on the primary key",
+      "There are no functional dependencies"
+    ],
+    "correct_answer": "A non-prime attribute depends on part of a composite key",
+    "topic": "2NF Violations",
+    "expected_cognitive_level": "L2"
+  },
+  {
+    "id": "Q_003",
+    "question": "A relation is in 2NF but not in 3NF. What does this imply?",
+    "options": [
+      "It contains repeating groups",
+      "It contains partial dependencies",
+      "It contains transitive dependencies",
+      "It has no candidate key"
+    ],
+    "correct_answer": "It contains transitive dependencies",
+    "topic": "3NF Understanding",
+    "expected_cognitive_level": "L2"
+  },
+  {
+    "id": "Q_004",
+    "question": "Which of the following best describes a transitive dependency?",
+    "options": [
+      "A key determines a non-key attribute",
+      "A non-key attribute determines another non-key attribute",
+      "A key determines another key",
+      "Two keys determine each other"
+    ],
+    "correct_answer": "A non-key attribute determines another non-key attribute",
+    "topic": "Functional Dependency",
+    "expected_cognitive_level": "L2"
+  },
+  {
+    "id": "Q_005",
+    "question": "Given R(A, B, C) with FD: A -> B and B -> C, which normal form is violated?",
+    "options": ["1NF", "2NF", "3NF", "BCNF"],
+    "correct_answer": "3NF",
+    "topic": "Transitive Dependency",
+    "expected_cognitive_level": "L3"
+  },
+  {
+    "id": "Q_006",
+    "question": "If a relation satisfies 3NF but violates BCNF, what must be true?",
+    "options": [
+      "There exists a functional dependency where determinant is not a superkey",
+      "There are repeating groups",
+      "There are partial dependencies",
+      "All attributes are prime"
+    ],
+    "correct_answer": "There exists a functional dependency where determinant is not a superkey",
+    "topic": "BCNF Analysis",
+    "expected_cognitive_level": "L3"
+  },
+  {
+    "id": "Q_007",
+    "question": "Given R(A, B, C, D) with FD: A -> B, B -> C, which decomposition ensures 3NF?",
+    "options": [
+      "R1(A, B), R2(B, C), R3(A, D)",
+      "R1(A, B, C, D)",
+      "R1(A, C), R2(B, D)",
+      "R1(A, B), R2(C, D)"
+    ],
+    "correct_answer": "R1(A, B), R2(B, C), R3(A, D)",
+    "topic": "Decomposition",
+    "expected_cognitive_level": "L4"
+  },
+  {
+    "id": "Q_008",
+    "question": "Find the candidate key for R(A, B, C) with FD: A -> B, B -> C.",
+    "options": ["A", "B", "C", "A, B"],
+    "correct_answer": "A",
+    "topic": "Candidate Keys",
+    "expected_cognitive_level": "L4"
+  },
+  {
+    "id": "Q_009",
+    "question": "Given a relation R(A, B, C, D) with FD: AB -> C and C -> D, what is the highest normal form?",
+    "options": ["1NF", "2NF", "3NF", "BCNF"],
+    "correct_answer": "2NF",
+    "topic": "Normalization Analysis",
+    "expected_cognitive_level": "L4"
+  },
+  {
+    "id": "Q_010",
+    "question": "Which decomposition removes transitive dependencies while preserving dependencies?",
+    "options": [
+      "Decomposition into 2NF",
+      "Decomposition into 3NF",
+      "Decomposition into BCNF",
+      "Decomposition into 1NF"
+    ],
+    "correct_answer": "Decomposition into 3NF",
+    "topic": "Normalization Strategy",
+    "expected_cognitive_level": "L3"
+  },
+  {
+    "id": "Q_011",
+    "question": "If attribute A always determines B but does not uniquely determine C, which of the following functional dependencies is valid?",
+    "options": ["A → B", "A → C", "A → (B,C)", "(B,C) → A"],
+    "correct_answer": "A → B",
+    "topic": "Functional Dependency",
+    "expected_cognitive_level": "L2"
+  },
+  {
+    "id": "Q_012",
+    "question": "What is the term used for different stages of relations created to eliminate update anomalies?",
+    "options": [
+      "Normal forms",
+      "Referential integrity constraints",
+      "Functional dependencies",
+      "None of the above"
+    ],
+    "correct_answer": "Normal forms",
+    "topic": "Normalization Concepts",
+    "expected_cognitive_level": "L2"
+  },
+  {
+    "id": "Q_013",
+    "question": "A relation is in BCNF and has no multivalued dependencies. Which normal form does it satisfy?",
+    "options": [
+      "Second Normal Form",
+      "Third Normal Form",
+      "Fourth Normal Form",
+      "Domain/Key Normal Form"
+    ],
+    "correct_answer": "Fourth Normal Form",
+    "topic": "Advanced Normalization",
+    "expected_cognitive_level": "L3"
+  },
+  {
+  "id": "Q_014",
+  "question": "Which condition ensures that a relation satisfies First Normal Form (1NF)?",
+  "options": [
+    "Attributes contain atomic values",
+    "No partial dependencies exist",
+    "No transitive dependencies exist",
+    "All determinants are superkeys"
+  ],
+  "correct_answer": "Attributes contain atomic values",
+  "topic": "1NF",
+  "expected_cognitive_level": "L2"
+},
+{
+  "id": "Q_015",
+  "question": "Given a functional dependency (A, B) → C, what type of dependency does this represent in normalization?",
+  "options": [
+    "Partial dependency",
+    "Full functional dependency",
+    "Transitive dependency",
+    "Multivalued dependency"
+  ],
+  "correct_answer": "Full functional dependency",
+  "topic": "Functional Dependency",
+  "expected_cognitive_level": "L3"
+},
+{
+  "id": "Q_016",
+  "question": "If A → B and A → C, what can be inferred in terms of normalization?",
+  "options": [
+    "A → (B, C)",
+    "B → A",
+    "C → A",
+    "(B, C) → A"
+  ],
+  "correct_answer": "A → (B, C)",
+  "topic": "Functional Dependency",
+  "expected_cognitive_level": "L3"
+},
+{
+    "id": "Q_017",
+    "question": "What is the primary goal of normalization in DBMS?",
+    "options": [
+      "Increase data redundancy",
+      "Improve query performance by denormalizing",
+      "Organize data to reduce redundancy and anomalies",
+      "Increase the number of tables"
+    ],
+    "correct_answer": "Organize data to reduce redundancy and anomalies",
+    "topic": "Normalization Concepts",
+    "expected_cognitive_level": "L2"
+  },
+  {
+    "id": "Q_018",
+    "question": "Which of the following situations violates First Normal Form (1NF)?",
+    "options": [
+      "Atomic column values",
+      "Unique rows",
+      "Multiple values in a single cell",
+      "Unique column names"
+    ],
+    "correct_answer": "Multiple values in a single cell",
+    "topic": "1NF",
+    "expected_cognitive_level": "L2"
+  },
+  {
+    "id": "Q_019",
+    "question": "Which type of dependency is eliminated when converting a relation into Second Normal Form (2NF)?",
+    "options": [
+      "Transitive dependency",
+      "Multivalued dependency",
+      "Partial dependency",
+      "Join dependency"
+    ],
+    "correct_answer": "Partial dependency",
+    "topic": "2NF",
+    "expected_cognitive_level": "L2"
+  },
+  {
+    "id": "Q_020",
+    "question": "A relation is in Second Normal Form (2NF) if:",
+    "options": [
+      "It is in 1NF and has no transitive dependency",
+      "It is in 1NF and has no partial dependency",
+      "It is in 3NF",
+      "It is denormalized"
+    ],
+    "correct_answer": "It is in 1NF and has no partial dependency",
+    "topic": "2NF",
+    "expected_cognitive_level": "L2"
+  },
+  {
+    "id": "Q_021",
+    "question": "What is a transitive dependency in a relation?",
+    "options": [
+      "If X → Y and Y → Z, then X → Z",
+      "An attribute depends on part of a primary key",
+      "A dependency involving foreign keys",
+      "A circular dependency"
+    ],
+    "correct_answer": "If X → Y and Y → Z, then X → Z",
+    "topic": "Functional Dependency",
+    "expected_cognitive_level": "L3"
+  },
+  {
+    "id": "Q_022",
+    "question": "Which type of dependency is removed when converting a relation into Third Normal Form (3NF)?",
+    "options": [
+      "Partial dependencies",
+      "Multivalued dependencies",
+      "Transitive dependencies",
+      "Composite keys"
+    ],
+    "correct_answer": "Transitive dependencies",
+    "topic": "3NF",
+    "expected_cognitive_level": "L2"
+  },
+  {
+    "id": "Q_023",
+    "question": "A relation is in BCNF if it is in 3NF and every determinant is which type of key?",
+    "options": ["Dependent key", "Normal key", "Candidate key", "Both normal and candidate key"],
+    "correct_answer": "Candidate key",
+    "topic": "BCNF",
+    "expected_cognitive_level": "L2"
+  },
+  {
+    "id": "Q_024",
+    "question": "Which normal form was introduced by Chris Date, Hugh Darwen, and Nikos Lorentzos?",
+    "options": ["Third", "Fourth", "Fifth", "Sixth"],
+    "correct_answer": "Sixth",
+    "topic": "Advanced Normalization",
+    "expected_cognitive_level": "L2"
+  },
+  {
+    "id": "Q_025",
+    "question": "A relation is in Third Normal Form (3NF) if it is in 2NF and has no:",
+    "options": [
+      "Functional dependencies",
+      "Transitive dependencies",
+      "Trivial functional dependencies",
+      "Multivalued dependencies"
+    ],
+    "correct_answer": "Transitive dependencies",
+    "topic": "3NF",
+    "expected_cognitive_level": "L2"
+  },
+  {
+    "id": "Q_026",
+    "question": "A relation is in Domain-Key Normal Form (DKNF) if every constraint is a logical consequence of:",
+    "options": [
+      "Fourth normal form",
+      "Fifth normal form",
+      "Domain and key constraints",
+      "None of the mentioned"
+    ],
+    "correct_answer": "Domain and key constraints",
+    "topic": "Advanced Normalization",
+    "expected_cognitive_level": "L3"
+  },
+  {
+    "id": "Q_027",
+    "question": "Which type of dependency occurs when X → Z exists because of X → Y and Y → Z?",
+    "options": [
+      "Multivalued dependency",
+      "Join dependency",
+      "Trivial functional dependency",
+      "Transitive dependency"
+    ],
+    "correct_answer": "Transitive dependency",
+    "topic": "Functional Dependency",
+    "expected_cognitive_level": "L3"
+  },
+  {
+    "id": "Q_028",
+    "question": "Anomalies in a relation are removed by splitting it into smaller relations. What is this process called?",
+    "options": [
+      "Accupressure",
+      "Decomposition",
+      "Precomposition",
+      "Both decomposition and precomposition"
+    ],
+    "correct_answer": "Decomposition",
+    "topic": "Normalization Process",
+    "expected_cognitive_level": "L3"
+  },
+  {
+    "id": "Q_029",
+    "question": "A relation schema R(A, B, C) has functional dependencies {A → B, B → C}. Which of the following is correct?",
+    "options": [
+      "R is in 1NF only",
+      "R is in 2NF but not in 3NF",
+      "R is in 3NF",
+      "R is not normalized"
+    ],
+    "correct_answer": "R is in 2NF but not in 3NF",
+    "topic": "Normalization Analysis",
+    "expected_cognitive_level": "L4"
+  },
+  {
+    "id": "Q_030",
+    "question": "What is the primary objective of normalization in database design?",
+    "options": [
+      "To increase redundancy for faster access",
+      "To reduce redundancy and anomalies in data",
+      "To improve indexing speed",
+      "To store data in nested form"
+    ],
+    "correct_answer": "To reduce redundancy and anomalies in data",
+    "topic": "Normalization Concepts",
+    "expected_cognitive_level": "L2"
+  },
+  {
+    "id": "Q_031",
+    "question": "Consider a student table where a student can have multiple languages and multiple hobbies independently. What violation is this?",
+    "options": [
+      "Violation of 3NF",
+      "Violation of 4NF (Multi-valued Dependency)",
+      "Violation of BCNF",
+      "Violation of 5NF"
+    ],
+    "correct_answer": "Violation of 4NF (Multi-valued Dependency)",
+    "topic": "4NF",
+    "expected_cognitive_level": "L4"
+  },
+  {
+    "id": "Q_032",
+    "question": "Which condition must be satisfied for a relation to be in First Normal Form (1NF)?",
+    "options": [
+      "It allows multi-valued attributes",
+      "It allows nested relations",
+      "Every attribute contains only atomic values",
+      "It must be in 3NF first"
+    ],
+    "correct_answer": "Every attribute contains only atomic values",
+    "topic": "1NF",
+    "expected_cognitive_level": "L2"
+  },
+  {
+    "id": "Q_033",
+    "question": "Consider relation R(SSN, PNUMBER, HOURS, ENAME) with functional dependencies {(SSN, PNUMBER) → HOURS, SSN → ENAME}. Which statement is correct?",
+    "options": [
+      "R is in 1NF only",
+      "R is in 2NF but not in 3NF",
+      "R is not in 2NF because of a partial dependency",
+      "R is in 3NF"
+    ],
+    "correct_answer": "R is not in 2NF because of a partial dependency",
+    "topic": "2NF Analysis",
+    "expected_cognitive_level": "L4"
+  },
+  {
+    "id": "Q_034",
+    "question": "Which of the following correctly defines Second Normal Form (2NF)?",
+    "options": [
+      "Every non-prime attribute is fully dependent on the entire primary key",
+      "Every attribute is atomic",
+      "No attribute depends transitively on the key",
+      "Every attribute is a foreign key"
+    ],
+    "correct_answer": "Every non-prime attribute is fully dependent on the entire primary key",
+    "topic": "2NF",
+    "expected_cognitive_level": "L2"
+  },
+  {
+    "id": "Q_035",
+    "question": "Consider relation R(A, B, C) with functional dependencies A → B and B → C. What is the highest normal form satisfied by R?",
+    "options": ["1NF", "2NF", "3NF", "BCNF"],
+    "correct_answer": "2NF",
+    "topic": "Normalization Analysis",
+    "expected_cognitive_level": "L4"
+  },
+  {
+    "id": "Q_036",
+    "question": "Consider relation TEACH(student, course, instructor) with functional dependencies {(student, course) → instructor, instructor → course}. Which normal form does the relation satisfy?",
+    "options": [
+      "2NF only",
+      "3NF but not BCNF",
+      "BCNF",
+      "1NF only"
+    ],
+    "correct_answer": "3NF but not BCNF",
+    "topic": "BCNF vs 3NF",
+    "expected_cognitive_level": "L4"
+  },
+  {
+    "id": "Q_037",
+    "question": "Which of the following represents a violation of Third Normal Form (3NF)?",
+    "options": [
+      "A non-prime attribute depending on a candidate key",
+      "A non-prime attribute depending on another non-prime attribute (transitive dependency)",
+      "A prime attribute depending on a superkey",
+      "A trivial functional dependency"
+    ],
+    "correct_answer": "A non-prime attribute depending on another non-prime attribute (transitive dependency)",
+    "topic": "3NF",
+    "expected_cognitive_level": "L3"
+  },
+  {
+    "id": "Q_038",
+    "question": "In Boyce-Codd Normal Form (BCNF), if a functional dependency X → A holds in a relation, what must be true?",
+    "options": [
+      "X must be a candidate key",
+      "X must be a superkey",
+      "A must be a prime attribute",
+      "None of the above"
+    ],
+    "correct_answer": "X must be a superkey",
+    "topic": "BCNF",
+    "expected_cognitive_level": "L3"
+  },
+  {
+    "id": "Q_039",
+    "question": "A relation schema R is in Second Normal Form (2NF) if:",
+    "options": [
+      "Every attribute is atomic",
+      "Every non-prime attribute is fully functionally dependent on every candidate key",
+      "Every non-prime attribute is non-transitively dependent on every key",
+      "Every functional dependency has a superkey on the left-hand side"
+    ],
+    "correct_answer": "Every non-prime attribute is fully functionally dependent on every candidate key",
+    "topic": "2NF",
+    "expected_cognitive_level": "L3"
+  },
+  {
+    "id": "Q_040",
+    "question": "A relation schema R is in Fourth Normal Form (4NF) if:",
+    "options": [
+      "Every non-prime attribute is dependent only on the primary key",
+      "Every nontrivial multivalued dependency X →→ Y has X as a superkey",
+      "Every functional dependency has X as a superkey",
+      "There are no transitive dependencies"
+    ],
+    "correct_answer": "Every nontrivial multivalued dependency X →→ Y has X as a superkey",
+    "topic": "4NF",
+    "expected_cognitive_level": "L3"
+  },
+  {
+    "id": "Q_041",
+    "question": "Which of the following statements is always true regarding normal forms?",
+    "options": [
+      "Every relation in 3NF is in 4NF",
+      "Every relation in BCNF is in 4NF",
+      "Every relation in 4NF is in BCNF",
+      "Every relation in 5NF is in 4NF"
+    ],
+    "correct_answer": "Every relation in 5NF is in 4NF",
+    "topic": "Normalization Hierarchy",
+    "expected_cognitive_level": "L4"
+  },
+  {
+    "id": "Q_042",
+    "question": "A multivalued dependency X →→ Y in a relation R is considered trivial if:",
+    "options": [
+      "Y is a subset of X",
+      "X ∪ Y equals R",
+      "Both (a) and (b)",
+      "Neither (a) nor (b)"
+    ],
+    "correct_answer": "Both (a) and (b)",
+    "topic": "Multivalued Dependency",
+    "expected_cognitive_level": "L3"
+  },
+  {
+    "id": "Q_043",
+    "question": "Which of the following correctly describes Fifth Normal Form (5NF)?",
+    "options": [
+      "A relation is in 5NF if every nontrivial join dependency has each decomposition component as a superkey",
+      "Multivalued dependency is a special case of 5NF",
+      "Discovering join dependencies in large databases is easy",
+      "5NF is widely used in real-world practice"
+    ],
+    "correct_answer": "A relation is in 5NF if every nontrivial join dependency has each decomposition component as a superkey",
+    "topic": "5NF",
+    "expected_cognitive_level": "L4"
+  },
+  {
+    "id": "Q_044",
+    "question": "Consider relation EMP(Ename, Pname, Dname) with multivalued dependencies Ename →→ Pname and Ename →→ Dname. Which of the following is correct?",
+    "options": [
+      "EMP is in 3NF but not BCNF",
+      "EMP is in BCNF but not 4NF",
+      "EMP is in 4NF",
+      "EMP is in 5NF"
+    ],
+    "correct_answer": "EMP is in BCNF but not 4NF",
+    "topic": "4NF Analysis",
+    "expected_cognitive_level": "L4"
+  },
+  {
+    "id": "Q_045",
+    "question": "What is the primary benefit of normalization in database design?",
+    "options": [
+      "Increase redundancy",
+      "Reduce redundancy",
+      "Increase number of tables",
+      "Improve indexing"
+    ],
+    "correct_answer": "Reduce redundancy",
+    "topic": "Normalization Concepts",
+    "expected_cognitive_level": "L2"
+  },
+  {
+    "id": "Q_046",
+    "question": "Normalization helps eliminate which types of anomalies in a database?",
+    "options": [
+      "Insert anomalies",
+      "Update anomalies",
+      "Delete anomalies",
+      "All of the above"
+    ],
+    "correct_answer": "All of the above",
+    "topic": "Anomalies",
+    "expected_cognitive_level": "L2"
+  },
+  {
+    "id": "Q_047",
+    "question": "What is the common approach used in normalization to reduce redundancy?",
+    "options": [
+      "Adding more attributes",
+      "Dividing larger tables into smaller tables",
+      "Merging tables",
+      "Creating duplicate tables"
+    ],
+    "correct_answer": "Dividing larger tables into smaller tables",
+    "topic": "Decomposition",
+    "expected_cognitive_level": "L2"
+  },
+  {
+    "id": "Q_048",
+    "question": "A relation is in First Normal Form (1NF) if:",
+    "options": [
+      "It contains multivalued attributes",
+      "It contains nested relations",
+      "All attributes contain atomic values",
+      "It is in 3NF"
+    ],
+    "correct_answer": "All attributes contain atomic values",
+    "topic": "1NF",
+    "expected_cognitive_level": "L2"
+  },
+  {
+    "id": "Q_049",
+    "question": "A relation is in Second Normal Form (2NF) if:",
+    "options": [
+      "It is in 1NF and all non-prime attributes are fully functionally dependent on the primary key",
+      "It contains no transitive dependencies",
+      "All attributes are atomic",
+      "All attributes are keys"
+    ],
+    "correct_answer": "It is in 1NF and all non-prime attributes are fully functionally dependent on the primary key",
+    "topic": "2NF",
+    "expected_cognitive_level": "L2"
+  },
+  {
+    "id": "Q_050",
+    "question": "A relation is in Third Normal Form (3NF) if:",
+    "options": [
+      "It is in 2NF and has no transitive dependencies",
+      "It is in 1NF only",
+      "It contains multivalued dependencies",
+      "It has repeating groups"
+    ],
+    "correct_answer": "It is in 2NF and has no transitive dependencies",
+    "topic": "3NF",
+    "expected_cognitive_level": "L2"
+  },
+  {
+    "id": "Q_051",
+    "question": "A relation is in Fourth Normal Form (4NF) if:",
+    "options": [
+      "It is in BCNF and has no multivalued dependencies",
+      "It has no transitive dependencies",
+      "It is in 2NF",
+      "It has only atomic values"
+    ],
+    "correct_answer": "It is in BCNF and has no multivalued dependencies",
+    "topic": "4NF",
+    "expected_cognitive_level": "L3"
+  },
+  {
+    "id": "Q_052",
+    "question": "A relation is in Fifth Normal Form (5NF) if:",
+    "options": [
+      "It is in 4NF and has no join dependencies with lossless decomposition",
+      "It is in 3NF",
+      "It has multivalued dependencies",
+      "It contains repeating groups"
+    ],
+    "correct_answer": "It is in 4NF and has no join dependencies with lossless decomposition",
+    "topic": "5NF",
+    "expected_cognitive_level": "L3"
+  },
+  {
+    "id": "Q_053",
+    "question": "Which condition must hold for a relation to satisfy BCNF?",
+    "options": [
+      "Every functional dependency has a superkey as determinant",
+      "No transitive dependencies exist",
+      "No partial dependencies exist",
+      "All attributes are atomic"
+    ],
+    "correct_answer": "Every functional dependency has a superkey as determinant",
+    "topic": "BCNF",
+    "expected_cognitive_level": "L3"
+  },
+  {
+    "id": "Q_054",
+    "question": "If a relation contains multiple values for an attribute corresponding to a single value of another attribute, what type of dependency exists?",
+    "options": [
+      "Functional dependency",
+      "Transitive dependency",
+      "Multivalued dependency",
+      "Join dependency"
+    ],
+    "correct_answer": "Multivalued dependency",
+    "topic": "Multivalued Dependency",
+    "expected_cognitive_level": "L3"
+  },
+  {
+    "id": "Q_055",
+    "question": "If every non-key attribute is fully functionally dependent on the primary key, the relation is in which normal form?",
+    "options": ["First Normal Form", "Second Normal Form", "Third Normal Form", "No normal form"],
+    "correct_answer": "Second Normal Form",
+    "topic": "2NF",
+    "expected_cognitive_level": "L2"
+  },
+  {
+    "id": "Q_056",
+    "question": "Which set of functional dependencies ensures that a relation is in 3NF but not in BCNF?",
+    "options": [
+      "{AB→CD, A→C, D→B}",
+      "{AB→CD, C→DA}",
+      "{A→BCD, B→CD, C→D}",
+      "{AB→CD, C→A, D→B}"
+    ],
+    "correct_answer": "{AB→CD, A→C, D→B}",
+    "topic": "BCNF vs 3NF",
+    "expected_cognitive_level": "L4"
+  },
+  {
+    "id": "Q_057",
+    "question": "Which of the following statements is incorrect?",
+    "options": [
+      "A relation in 2NF is also in 1NF",
+      "A relation in 3NF is also in 2NF",
+      "A relation in 3NF is also in BCNF",
+      "A relation in BCNF is also in 3NF"
+    ],
+    "correct_answer": "A relation in 3NF is also in BCNF",
+    "topic": "Normalization Hierarchy",
+    "expected_cognitive_level": "L3"
+  },
+  {
+    "id": "Q_058",
+    "question": "Denormalization in databases is primarily used for:",
+    "options": [
+      "Database backup",
+      "Deleting tables",
+      "Eliminating redundancy",
+      "Performance tuning"
+    ],
+    "correct_answer": "Performance tuning",
+    "topic": "Denormalization",
+    "expected_cognitive_level": "L3"
+  },
+  {
+    "id": "Q_059",
+    "question": "Atomicity of attributes is a requirement of which normal form?",
+    "options": [
+      "First Normal Form",
+      "Second Normal Form",
+      "Third Normal Form",
+      "Boyce-Codd Normal Form"
+    ],
+    "correct_answer": "First Normal Form",
+    "topic": "1NF",
+    "expected_cognitive_level": "L2"
+  },
+  {
+    "id": "Q_060",
+    "question": "Which normal form eliminates partial dependencies?",
+    "options": [
+      "First Normal Form",
+      "Second Normal Form",
+      "Third Normal Form",
+      "Boyce-Codd Normal Form"
+    ],
+    "correct_answer": "Second Normal Form",
+    "topic": "2NF",
+    "expected_cognitive_level": "L2"
+  },
+  {
+    "id": "Q_061",
+    "question": "Which normal form eliminates transitive dependencies?",
+    "options": [
+      "First Normal Form",
+      "Second Normal Form",
+      "Third Normal Form",
+      "Boyce-Codd Normal Form"
+    ],
+    "correct_answer": "Third Normal Form",
+    "topic": "3NF",
+    "expected_cognitive_level": "L2"
+  },
+  {
+    "id": "Q_062",
+    "question": "Which normal form eliminates multivalued dependencies?",
+    "options": [
+      "Second Normal Form",
+      "Third Normal Form",
+      "Fourth Normal Form",
+      "Fifth Normal Form"
+    ],
+    "correct_answer": "Fourth Normal Form",
+    "topic": "4NF",
+    "expected_cognitive_level": "L3"
+  },
+  {
+    "id": "Q_063",
+    "question": "What is the primary purpose of normalization in a database?",
+    "options": [
+      "To slow down queries",
+      "To reduce redundancy and improve data integrity",
+      "To increase duplication",
+      "To store nested data"
+    ],
+    "correct_answer": "To reduce redundancy and improve data integrity",
+    "topic": "Normalization Concepts",
+    "expected_cognitive_level": "L2"
+  },
+  {
+    "id": "Q_064",
+    "question": "Which normal form is stricter than BCNF?",
+    "options": [
+      "First Normal Form",
+      "Second Normal Form",
+      "Third Normal Form",
+      "Fourth Normal Form"
+    ],
+    "correct_answer": "Fourth Normal Form",
+    "topic": "Normalization Hierarchy",
+    "expected_cognitive_level": "L3"
+  },
+  {
+    "id": "Q_065",
+    "question": "Which of the following best describes a functional dependency?",
+    "options": [
+      "A relationship between two tables",
+      "A relationship between two attributes",
+      "A relationship between two records",
+      "A relationship between two keys"
+    ],
+    "correct_answer": "A relationship between two attributes",
+    "topic": "Functional Dependency",
+    "expected_cognitive_level": "L2"
+  },
+  {
+    "id": "Q_066",
+    "question": "A relation is in BCNF if it is in 3NF and every determinant is which type of key?",
+    "options": ["Dependent key", "Normal key", "Candidate key", "Both normal and candidate key"],
+    "correct_answer": "Candidate key",
+    "topic": "BCNF",
+    "expected_cognitive_level": "L2"
+  },
+  {
+    "id": "Q_067",
+    "question": "You have a table OrderItems with a composite key (OrderID, ProductID) that also stores CustomerName. Which violation is this?",
+    "options": [
+      "Violation of 1NF",
+      "Violation of 2NF (Partial Dependency)",
+      "Violation of 3NF (Transitive Dependency)",
+      "Violation of BCNF"
+    ],
+    "correct_answer": "Violation of 2NF (Partial Dependency)",
+    "topic": "Partial Dependency",
+    "expected_cognitive_level": "L3"
+  },
+  {
+    "id": "Q_068",
+    "question": "Consider a table where a person can have multiple favourite colours stored as separate rows. Is this table in First Normal Form (1NF)?",
+    "options": ["True", "False"],
+    "correct_answer": "True",
+    "topic": "1NF",
+    "expected_cognitive_level": "L3"
+  },
+  {
+    "id": "Q_069",
+    "question": "In database normalization, the order of rows and columns is immaterial.",
+    "options": ["True", "False"],
+    "correct_answer": "True",
+    "topic": "Relational Model",
+    "expected_cognitive_level": "L2"
+  },
+  {
+    "id": "Q_070",
+    "question": "Consider the BOOK table with dependencies: ISBN → Title, ISBN → Publisher, Publisher → Address.ISBN is the primary key. What is its normal form?",
+    "options": [
+      "First Normal Form",
+      "Second Normal Form",
+      "Third Normal Form",
+      "BCNF"
+    ],
+    "correct_answer": "Second Normal Form",
+    "topic": "Transitive Dependency Analysis",
+    "expected_cognitive_level": "L3"
+  },
+  {
+    "id": "Q_071",
+    "question": "Which property of normal forms ensures that a transformed formula has the same truth table as the original formula?",
+    "options": [
+      "Minimality",
+      "Canonical representation",
+      "Logical equivalence",
+      "Simplification"
+    ],
+    "correct_answer": "Logical equivalence",
+    "topic": "Theory",
+    "expected_cognitive_level": "L1"
+  },
+  {
+    "id": "Q_072",
+    "question": "What minimal condition must a relation satisfy to be considered in First Normal Form (1NF)?",
+    "options": [
+      "All non-key attributes must depend on the whole key",
+      "No non-prime attribute depends on another non-prime attribute",
+      "Every column must contain atomic values and each row must be unique",
+      "Every determinant must be a superkey"
+    ],
+    "correct_answer": "Every column must contain atomic values and each row must be unique",
+    "topic": "1NF Definition",
+    "expected_cognitive_level": "L1"
+  },
+  {
+    "id": "Q_073",
+    "question": "If an attribute uniquely determines all other attributes in a relation, it is known as which type of key?",
+    "options": ["Candidate key", "Join key", "Functional key", "None of the above"],
+    "correct_answer": "Candidate key",
+    "topic": "Keys and Dependencies",
+    "expected_cognitive_level": "L2"
+  },
+  {
+    "id": "Q_074",
+    "question": "After decomposing a relation into two tables to remove partial dependency, are the resulting tables in Second Normal Form (2NF)?",
+    "options": ["True", "False"],
+    "correct_answer": "True",
+    "topic": "2NF",
+    "expected_cognitive_level": "L3"
+  },
+  {
+    "id": "Q_075",
+    "question": "Splitting a relation into multiple relations to eliminate anomalies is known as:",
+    "options": [
+      "Accupressure",
+      "Decomposition",
+      "Precomposition",
+      "Both decomposition and precomposition"
+    ],
+    "correct_answer": "Decomposition",
+    "topic": "Normalization Process",
+    "expected_cognitive_level": "L2"
+  },
+  {
+    "id": "Q_076",
+    "question": "For the relation R(ABCDEFGH) with FDs = {CH->G, A->BC, B->CHF, E->A, F->EG}, what is the highest normal form of R? (Note: Candidate keys are AD, BD, ED, FD).",
+    "options": [
+      "In 1NF, but not in 2NF",
+      "In 2NF, but not in 3NF",
+      "In 3NF, but not in BCNF",
+      "In BCNF"
+    ],
+    "correct_answer": "In 1NF, but not in 2NF",
+    "topic": "Normalization Analysis",
+    "expected_cognitive_level": "L4"
+  },
+  {
+    "id": "Q_077",
+    "question": "In a relational data model, which one of the following statements is TRUE?",
+    "options": [
+      "A relation with only two attributes is always in BCNF.",
+      "If all attributes of a relation are prime attributes, then the relation is in BCNF.",
+      "Every relation has at least one non-prime attribute.",
+      "BCNF decompositions always preserve functional dependencies."
+    ],
+    "correct_answer": "A relation with only two attributes is always in BCNF.",
+    "topic": "BCNF Properties",
+    "expected_cognitive_level": "L3"
+  },
+  {
+    "id": "Q_078",
+    "question": "Which one of the following statements about normal forms is FALSE?",
+    "options": [
+      "BCNF is stricter than 3NF.",
+      "Lossless, dependency-preserving decomposition into 3NF is always possible.",
+      "Lossless, dependency-preserving decomposition into BCNF is always possible.",
+      "Any relation with two attributes is in BCNF."
+    ],
+    "correct_answer": "Lossless, dependency-preserving decomposition into BCNF is always possible.",
+    "topic": "Decomposition Theory",
+    "expected_cognitive_level": "L3"
+  },
+  {
+    "id": "Q_079",
+    "question": "Relation R and S are decomposed; one is BCNF and the other is 3NF. Which test guaranteed identification of the BCNF relation?",
+    "options": [
+      "Dependency-preservation",
+      "Lossless-join",
+      "BCNF definition",
+      "3NF definition"
+    ],
+    "correct_answer": "BCNF definition",
+    "topic": "Systematic Identification",
+    "expected_cognitive_level": "L2"
+  },
+  {
+    "id": "Q_080",
+    "question": "When a relation R with FDs is decomposed into BCNF, the redundancy arising specifically out of functional dependencies is:",
+    "options": [
+      "Zero",
+      "More than zero but less than 3NF",
+      "Proportional to the size of F+",
+      "Indeterminate"
+    ],
+    "correct_answer": "Zero",
+    "topic": "Redundancy Theory",
+    "expected_cognitive_level": "L2"
+  },
+  {
+    "id": "Q_081",
+    "question": "S1: Every table with two single-valued attributes is in BCNF. S2: {AB->C, D->E, E->C} is a minimal cover for {AB->C, D->E, AB->E, E->C}. Which is correct?",
+    "options": [
+      "S1 is TRUE and S2 is FALSE",
+      "Both S1 and S2 are TRUE",
+      "S1 is FALSE and S2 is TRUE",
+      "Both S1 and S2 are FALSE"
+    ],
+    "correct_answer": "S1 is TRUE and S2 is FALSE",
+    "topic": "Minimal Cover & BCNF",
+    "expected_cognitive_level": "L4"
+  },
+  {
+    "id": "Q_082",
+    "question": "Which of the following statements about a relation R in 1NF is TRUE?",
+    "options": [
+      "R cannot have a foreign key.",
+      "R can have a multi-attribute key.",
+      "R cannot have more than one candidate key.",
+      "R can have a composite attribute."
+    ],
+    "correct_answer": "R can have a multi-attribute key.",
+    "topic": "1NF Properties",
+    "expected_cognitive_level": "L2"
+  },
+  {
+    "id": "Q_083",
+    "question": "Decomposing team(name, city, owner) with FDs {name->city, name->owner} into t1(name, city) and t2(name, owner). Which is TRUE?",
+    "options": [
+      "The relation team is in BCNF.",
+      "The relations t1 and t2 are in BCNF.",
+      "The decomposition is not a lossless join.",
+      "The relation team is in 3NF."
+    ],
+    "correct_answer": "The relations t1 and t2 are in BCNF.",
+    "topic": "Decomposition Analysis",
+    "expected_cognitive_level": "L4"
+  },
+  {
+    "id": "Q_084",
+    "question": "Which of the following statements is TRUE regarding the relationship between 3NF and BCNF?",
+    "options": [
+      "Every relation in 3NF is also in BCNF",
+      "A relation R is in 3NF if every non-prime attribute of R is fully functionally dependent on every key of R",
+      "Every relation in BCNF is also in 3NF",
+      "No relation can be in both BCNF and 3NF"
+    ],
+    "correct_answer": "Every relation in BCNF is also in 3NF",
+    "topic": "Normal Form Hierarchy",
+    "expected_cognitive_level": "L2"
+  },
+  {
+    "id": "Q_085",
+    "question": "In RDBMS, different classes of relations are created using which technique to prevent modification anomalies?",
+    "options": [
+      "Functional Dependencies",
+      "Data integrity",
+      "Referential integrity",
+      "Normal Forms"
+    ],
+    "correct_answer": "Normal Forms",
+    "topic": "Normalization Goals",
+    "expected_cognitive_level": "L1"
+  },
+  {
+    "id": "Q_086",
+    "question": "In a relational student table with attributes Reg_Num (Unique), UID (National Unique ID), and BankAccount_Num (Primary account), which statement is INCORRECT?",
+    "options": [
+      "BankAccount_Num is a candidate key",
+      "Registration_Num can be a primary key",
+      "UID is candidate key if all students are from the same country",
+      "If S is a superkey such that S∩UID is NULL then S∪UID is also a superkey"
+    ],
+    "correct_answer": "BankAccount_Num is a candidate key",
+    "topic": "Candidate Keys",
+    "expected_cognitive_level": "L3"
+  },
+  {
+    "id": "Q_087",
+    "question": "Consider Suppliers(sid, sname, city, street) where (sname, city) forms a candidate key and no other FDs exist. What is the normal form?",
+    "options": [
+      "The schema is in BCNF",
+      "The schema is in 3NF but not in BCNF",
+      "The schema is in 2NF but not in 3NF",
+      "The schema is not in 2NF"
+    ],
+    "correct_answer": "The schema is in BCNF",
+    "topic": "Normal Form Identification",
+    "expected_cognitive_level": "L3"
+  }
+]

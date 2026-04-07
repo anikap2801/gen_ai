@@ -1,0 +1,1759 @@
+### TOPIC: Functional Dependency ###
+DEFINITION: A functional dependency X → Y exists if X uniquely determines Y.
+KEY TERMS: FD, determinant, dependency
+DEPTH: L1 (Recall)
+
+### TOPIC: Super Key ###
+DEFINITION: A super key is a set of attributes that uniquely identifies a tuple.
+KEY TERMS: uniqueness, identifier
+DEPTH: L1 (Recall)
+
+### TOPIC: Candidate Key ###
+DEFINITION: A candidate key is a minimal super key.
+KEY TERMS: minimal, uniqueness
+DEPTH: L1 (Recall)
+
+### TOPIC: Primary Key ###
+DEFINITION: A primary key is a chosen candidate key used to uniquely identify tuples.
+KEY TERMS: uniqueness, identifier
+DEPTH: L1 (Recall)
+
+### TOPIC: Foreign Key ###
+DEFINITION: A foreign key is an attribute that references a primary key in another relation.
+KEY TERMS: reference, relation
+DEPTH: L1 (Recall)
+
+### TOPIC: Prime Attribute ###
+DEFINITION: A prime attribute is part of at least one candidate key.
+KEY TERMS: candidate key
+DEPTH: L1 (Recall)
+
+### TOPIC: Non-Prime Attribute ###
+DEFINITION: A non-prime attribute is not part of any candidate key.
+KEY TERMS: attribute
+DEPTH: L1 (Recall)
+
+### TOPIC: First Normal Form (1NF) ###
+DEFINITION: A relation is in 1NF if all attributes have atomic values.
+KEY TERMS: atomic, no repeating groups
+DEPTH: L1 (Recall)
+
+### TOPIC: Second Normal Form (2NF) ###
+DEFINITION: A relation is in 2NF if it is in 1NF and has no partial dependencies.
+KEY TERMS: partial dependency
+DEPTH: L1 (Recall)
+
+### TOPIC: Third Normal Form (3NF) ###
+DEFINITION: A relation is in 3NF if it has no transitive dependencies.
+KEY TERMS: transitive dependency
+DEPTH: L1 (Recall)
+
+### TOPIC: Boyce-Codd Normal Form (BCNF) ###
+DEFINITION: A relation is in BCNF if every determinant is a super key.
+KEY TERMS: determinant, super key
+DEPTH: L1 (Recall)
+
+### TOPIC: Partial Dependency ###
+DEFINITION: A dependency where a non-prime attribute depends on part of a candidate key.
+KEY TERMS: subset, key
+DEPTH: L1 (Recall)
+
+### TOPIC: Transitive Dependency ###
+DEFINITION: A dependency where a non-prime attribute depends on another non-prime attribute.
+KEY TERMS: indirect dependency
+DEPTH: L1 (Recall)
+
+### TOPIC: Determinant ###
+DEFINITION: The left-hand side of a functional dependency.
+KEY TERMS: X → Y
+DEPTH: L1 (Recall)
+
+### TOPIC: Attribute ###
+DEFINITION: A column in a relation.
+KEY TERMS: column, field
+DEPTH: L1 (Recall)
+
+### TOPIC: Tuple ###
+DEFINITION: A row in a relation.
+KEY TERMS: record
+DEPTH: L1 (Recall)
+
+### TOPIC: Relation ###
+DEFINITION: A table consisting of rows and columns.
+KEY TERMS: table
+DEPTH: L1 (Recall)
+
+### TOPIC: Domain ###
+DEFINITION: The set of valid values an attribute can take.
+KEY TERMS: values
+DEPTH: L1 (Recall)
+
+### TOPIC: Cardinality ###
+DEFINITION: The number of tuples in a relation.
+KEY TERMS: rows
+DEPTH: L1 (Recall)
+
+### TOPIC: Degree ###
+DEFINITION: The number of attributes in a relation.
+KEY TERMS: columns
+DEPTH: L1 (Recall)
+
+### TOPIC: Composite Key ###
+DEFINITION: A key consisting of more than one attribute.
+KEY TERMS: multiple attributes
+DEPTH: L1 (Recall)
+
+### TOPIC: Closure ###
+DEFINITION: The set of attributes determined by an attribute set.
+KEY TERMS: X⁺
+DEPTH: L1 (Recall)
+
+### TOPIC: Trivial Dependency ###
+DEFINITION: A dependency where RHS is a subset of LHS.
+KEY TERMS: X → X
+DEPTH: L1 (Recall)
+
+### TOPIC: Non-Trivial Dependency ###
+DEFINITION: A dependency where RHS is not a subset of LHS.
+KEY TERMS: X → Y
+DEPTH: L1 (Recall)
+
+### TOPIC: Armstrong’s Axioms ###
+DEFINITION: A set of inference rules used to derive functional dependencies.
+KEY TERMS: reflexivity, augmentation, transitivity
+DEPTH: L1 (Recall)
+
+### TOPIC: Reflexivity ###
+DEFINITION: If Y is a subset of X, then X → Y holds.
+KEY TERMS: subset
+DEPTH: L1 (Recall)
+
+### TOPIC: Augmentation ###
+DEFINITION: If X → Y, then XZ → YZ.
+KEY TERMS: extension
+DEPTH: L1 (Recall)
+
+### TOPIC: Transitivity ###
+DEFINITION: If X → Y and Y → Z, then X → Z.
+KEY TERMS: chain
+DEPTH: L1 (Recall)
+
+### TOPIC: Lossless Join ###
+DEFINITION: A decomposition that preserves original tuples after join.
+KEY TERMS: no spurious tuples
+DEPTH: L1 (Recall)
+
+### TOPIC: Lossy Join ###
+DEFINITION: A decomposition that creates spurious tuples after join.
+KEY TERMS: incorrect tuples
+DEPTH: L1 (Recall)
+
+### TOPIC: Dependency Preservation ###
+DEFINITION: All functional dependencies can be enforced without joining tables.
+KEY TERMS: enforcement
+DEPTH: L1 (Recall)
+
+### TOPIC: Redundancy ###
+DEFINITION: Unnecessary duplication of data.
+KEY TERMS: duplication
+DEPTH: L1 (Recall)
+
+### TOPIC: Insertion Anomaly ###
+DEFINITION: Inability to insert data without other data.
+KEY TERMS: anomaly
+DEPTH: L1 (Recall)
+
+### TOPIC: Deletion Anomaly ###
+DEFINITION: Deleting data unintentionally removes other data.
+KEY TERMS: anomaly
+DEPTH: L1 (Recall)
+
+### TOPIC: Update Anomaly ###
+DEFINITION: Updating data requires multiple changes.
+KEY TERMS: inconsistency
+DEPTH: L1 (Recall)
+
+### TOPIC: Minimal Cover ###
+DEFINITION: A simplified set of functional dependencies.
+KEY TERMS: minimal
+DEPTH: L1 (Recall)
+
+### TOPIC: Extraneous Attribute ###
+DEFINITION: An attribute that can be removed without affecting dependencies.
+KEY TERMS: unnecessary
+DEPTH: L1 (Recall)
+
+### TOPIC: Canonical Cover ###
+DEFINITION: A minimal equivalent set of functional dependencies.
+KEY TERMS: minimal set
+DEPTH: L1 (Recall)
+
+### TOPIC: Decomposition ###
+DEFINITION: Breaking a relation into smaller relations.
+KEY TERMS: split
+DEPTH: L1 (Recall)
+
+### TOPIC: Schema ###
+DEFINITION: Structure of a relation including attributes.
+KEY TERMS: structure
+DEPTH: L1 (Recall)
+
+### TOPIC: Integrity Constraint ###
+DEFINITION: Rules that ensure correctness of data.
+KEY TERMS: rules
+DEPTH: L1 (Recall)
+
+### TOPIC: Entity Integrity ###
+DEFINITION: Primary key cannot contain null values.
+KEY TERMS: primary key
+DEPTH: L1 (Recall)
+
+### TOPIC: Referential Integrity ###
+DEFINITION: Foreign key must match primary key or be null.
+KEY TERMS: reference
+DEPTH: L1 (Recall)
+
+### TOPIC: Multi-Valued Attribute ###
+DEFINITION: Attribute that can store multiple values.
+KEY TERMS: multiple values
+DEPTH: L1 (Recall)
+
+### TOPIC: Normalization ###
+DEFINITION: Process of reducing redundancy in database design.
+KEY TERMS: optimization
+DEPTH: L1 (Recall)
+
+### TOPIC: Data Integrity ###
+DEFINITION: Accuracy and consistency of data.
+KEY TERMS: correctness
+DEPTH: L1 (Recall)
+
+### TOPIC: Dependency ###
+DEFINITION: Relationship between attributes.
+KEY TERMS: relation
+DEPTH: L1 (Recall)
+
+### TOPIC: Attribute Set ###
+DEFINITION: A group of attributes considered together.
+KEY TERMS: set
+DEPTH: L1 (Recall)
+
+### TOPIC: Functional Dependency ###
+EXPLANATION: Functional dependency captures how one set of attributes determines another and is fundamental for identifying keys and normalization.
+COMPARISON: Unlike simple attribute storage, it defines relationships used in normalization.
+DEPTH: L2 (Understanding)
+
+### TOPIC: Super Key ###
+EXPLANATION: A super key ensures uniqueness but may include extra attributes beyond what is necessary.
+COMPARISON: Unlike candidate keys, it is not minimal.
+DEPTH: L2 (Understanding)
+
+### TOPIC: Candidate Key ###
+EXPLANATION: A candidate key is the smallest set of attributes that uniquely identifies tuples.
+COMPARISON: Unlike super keys, it does not contain redundant attributes.
+DEPTH: L2 (Understanding)
+
+### TOPIC: Primary Key ###
+EXPLANATION: A primary key is selected from candidate keys to uniquely identify tuples in practice.
+COMPARISON: Unlike candidate keys, only one is chosen as primary.
+DEPTH: L2 (Understanding)
+
+### TOPIC: Foreign Key ###
+EXPLANATION: A foreign key maintains relationships between tables by referencing another table’s primary key.
+COMPARISON: Unlike primary keys, it may contain duplicate values.
+DEPTH: L2 (Understanding)
+
+### TOPIC: Prime Attribute ###
+EXPLANATION: Prime attributes participate in candidate keys and help define key structure.
+COMPARISON: Unlike non-prime attributes, they are less prone to redundancy issues.
+DEPTH: L2 (Understanding)
+
+### TOPIC: Non-Prime Attribute ###
+EXPLANATION: Non-prime attributes are dependent on keys and often lead to redundancy if not normalized.
+COMPARISON: Unlike prime attributes, they are not part of candidate keys.
+DEPTH: L2 (Understanding)
+
+### TOPIC: First Normal Form (1NF) ###
+EXPLANATION: 1NF ensures all attributes are atomic, eliminating repeating groups and multi-valued attributes.
+COMPARISON: Unlike unnormalized relations, it enforces a tabular structure.
+DEPTH: L2 (Understanding)
+
+### TOPIC: Second Normal Form (2NF) ###
+EXPLANATION: 2NF ensures that every non-prime attribute is fully dependent on the entire candidate key, removing partial dependencies.
+COMPARISON: Unlike 1NF, it addresses dependency issues beyond atomicity.
+DEPTH: L2 (Understanding)
+
+### TOPIC: Third Normal Form (3NF) ###
+EXPLANATION: A relation is in 3NF if for every functional dependency X → Y, either X is a super key or Y is a prime attribute.
+COMPARISON: Unlike 2NF, it eliminates indirect (transitive) dependencies.
+DEPTH: L2 (Understanding)
+
+### TOPIC: Boyce-Codd Normal Form (BCNF) ###
+EXPLANATION: BCNF requires that for every functional dependency X → Y, X must be a super key.
+COMPARISON: Unlike 3NF, it does not allow exceptions for prime attributes.
+DEPTH: L2 (Understanding)
+
+### TOPIC: Partial Dependency ###
+EXPLANATION: Partial dependency occurs when a non-prime attribute depends on only a subset of a candidate key.
+COMPARISON: Unlike full dependency, it violates 2NF.
+DEPTH: L2 (Understanding)
+
+### TOPIC: Transitive Dependency ###
+EXPLANATION: Transitive dependency occurs when a non-prime attribute depends on another non-prime attribute that depends on a candidate key.
+COMPARISON: Unlike direct dependency, it causes indirect redundancy.
+DEPTH: L2 (Understanding)
+
+### TOPIC: Determinant ###
+EXPLANATION: A determinant is the attribute set that determines another attribute in a functional dependency.
+COMPARISON: Unlike dependent attributes, determinants control data relationships.
+DEPTH: L2 (Understanding)
+
+### TOPIC: Attribute ###
+EXPLANATION: Attributes define the properties of an entity in a relation.
+COMPARISON: Unlike tuples, attributes describe structure rather than data.
+DEPTH: L2 (Understanding)
+
+### TOPIC: Tuple ###
+EXPLANATION: A tuple represents a single record in a relation.
+COMPARISON: Unlike attributes, tuples store actual data.
+DEPTH: L2 (Understanding)
+
+### TOPIC: Relation ###
+EXPLANATION: A relation organizes data into a structured table with rows and columns.
+COMPARISON: Unlike unstructured data, relations enforce schema.
+DEPTH: L2 (Understanding)
+
+### TOPIC: Domain ###
+EXPLANATION: Domain defines valid values for an attribute to ensure data integrity.
+COMPARISON: Unlike unrestricted attributes, domains enforce constraints.
+DEPTH: L2 (Understanding)
+
+### TOPIC: Cardinality ###
+EXPLANATION: Cardinality represents the number of tuples in a relation.
+COMPARISON: Unlike degree, it measures size rather than structure.
+DEPTH: L2 (Understanding)
+
+### TOPIC: Degree ###
+EXPLANATION: Degree represents the number of attributes in a relation.
+COMPARISON: Unlike cardinality, it refers to columns instead of rows.
+DEPTH: L2 (Understanding)
+
+### TOPIC: Composite Key ###
+EXPLANATION: Composite keys combine multiple attributes to uniquely identify tuples.
+COMPARISON: Unlike single keys, they handle multi-attribute uniqueness.
+DEPTH: L2 (Understanding)
+
+### TOPIC: Closure ###
+EXPLANATION: Closure helps determine all attributes functionally dependent on a given set.
+COMPARISON: Unlike direct dependency, closure gives full reachability.
+DEPTH: L2 (Understanding)
+
+### TOPIC: Trivial Dependency ###
+EXPLANATION: Trivial dependencies always hold because the right side is part of the left side.
+COMPARISON: Unlike non-trivial dependencies, they provide no new information.
+DEPTH: L2 (Understanding)
+
+### TOPIC: Non-Trivial Dependency ###
+EXPLANATION: Non-trivial dependencies represent meaningful relationships between attributes.
+COMPARISON: Unlike trivial dependencies, they impact normalization.
+DEPTH: L2 (Understanding)
+
+### TOPIC: Armstrong’s Axioms ###
+EXPLANATION: Armstrong’s axioms provide rules to derive all functional dependencies.
+COMPARISON: Unlike informal reasoning, they offer formal derivation.
+DEPTH: L2 (Understanding)
+
+### TOPIC: Reflexivity ###
+EXPLANATION: Reflexivity states that attributes determine themselves.
+COMPARISON: Unlike other rules, it is always valid.
+DEPTH: L2 (Understanding)
+
+### TOPIC: Augmentation ###
+EXPLANATION: Augmentation allows extending dependencies by adding attributes.
+COMPARISON: Unlike transitivity, it does not chain dependencies.
+DEPTH: L2 (Understanding)
+
+### TOPIC: Transitivity ###
+EXPLANATION: Transitivity allows deriving new dependencies through chaining.
+COMPARISON: Unlike augmentation, it connects dependencies.
+DEPTH: L2 (Understanding)
+
+### TOPIC: Lossless Join ###
+EXPLANATION: Lossless join ensures decomposition does not introduce spurious tuples.
+COMPARISON: Unlike lossy join, it preserves correctness of data.
+DEPTH: L2 (Understanding)
+
+### TOPIC: Lossy Join ###
+EXPLANATION: Lossy join introduces incorrect tuples during reconstruction.
+COMPARISON: Unlike lossless join, it results in inaccurate data.
+DEPTH: L2 (Understanding)
+
+### TOPIC: Dependency Preservation ###
+EXPLANATION: Dependency preservation ensures constraints can be enforced without joining relations.
+COMPARISON: Unlike non-preserving decomposition, it simplifies enforcement.
+DEPTH: L2 (Understanding)
+
+### TOPIC: Redundancy ###
+EXPLANATION: Redundancy leads to repeated data and inefficiency.
+COMPARISON: Unlike normalized data, it causes anomalies.
+DEPTH: L2 (Understanding)
+
+### TOPIC: Insertion Anomaly ###
+EXPLANATION: Occurs when inserting data requires unrelated attributes.
+COMPARISON: Unlike normalized tables, it restricts insertion.
+DEPTH: L2 (Understanding)
+
+### TOPIC: Deletion Anomaly ###
+EXPLANATION: Occurs when deleting a tuple removes additional important data.
+COMPARISON: Unlike normalized systems, it causes unintended loss.
+DEPTH: L2 (Understanding)
+
+### TOPIC: Update Anomaly ###
+EXPLANATION: Requires multiple updates to maintain consistency.
+COMPARISON: Unlike normalized systems, it risks inconsistency.
+DEPTH: L2 (Understanding)
+
+### TOPIC: Minimal Cover ###
+EXPLANATION: Minimal cover simplifies dependencies without changing meaning.
+COMPARISON: Unlike original sets, it removes redundancy.
+DEPTH: L2 (Understanding)
+
+### TOPIC: Extraneous Attribute ###
+EXPLANATION: An attribute is extraneous if it can be removed without affecting dependencies.
+COMPARISON: Unlike essential attributes, it is unnecessary.
+DEPTH: L2 (Understanding)
+
+### TOPIC: Canonical Cover ###
+EXPLANATION: Canonical cover is a minimal equivalent set of dependencies.
+COMPARISON: Unlike arbitrary sets, it ensures efficiency.
+DEPTH: L2 (Understanding)
+
+### TOPIC: Decomposition ###
+EXPLANATION: Decomposition splits relations to remove redundancy and improve structure.
+COMPARISON: Unlike original relations, decomposed ones reduce anomalies.
+DEPTH: L2 (Understanding)
+
+### TOPIC: Schema ###
+EXPLANATION: Schema defines structure and constraints of a relation.
+COMPARISON: Unlike data, it defines organization.
+DEPTH: L2 (Understanding)
+
+### TOPIC: Integrity Constraint ###
+EXPLANATION: Constraints ensure correctness and validity of data.
+COMPARISON: Unlike free data, constraints enforce rules.
+DEPTH: L2 (Understanding)
+
+### TOPIC: Entity Integrity ###
+EXPLANATION: Ensures primary keys are not null to maintain identity.
+COMPARISON: Unlike general constraints, it focuses on uniqueness.
+DEPTH: L2 (Understanding)
+
+### TOPIC: Referential Integrity ###
+EXPLANATION: Ensures foreign keys correctly reference existing tuples.
+COMPARISON: Unlike entity integrity, it links multiple relations.
+DEPTH: L2 (Understanding)
+
+### TOPIC: Multi-Valued Attribute ###
+EXPLANATION: Stores multiple values in one attribute, violating atomicity.
+COMPARISON: Unlike atomic attributes, it breaks 1NF.
+DEPTH: L2 (Understanding)
+
+### TOPIC: Normalization ###
+EXPLANATION: Normalization organizes data to reduce redundancy and anomalies.
+COMPARISON: Unlike unnormalized data, it improves consistency.
+DEPTH: L2 (Understanding)
+
+### TOPIC: Data Integrity ###
+EXPLANATION: Data integrity ensures accuracy and consistency of stored data.
+COMPARISON: Unlike inconsistent systems, it enforces reliability.
+DEPTH: L2 (Understanding)
+
+### TOPIC: Dependency ###
+EXPLANATION: Dependency defines how attributes are related.
+COMPARISON: Unlike independent attributes, it shows relationships.
+DEPTH: L2 (Understanding)
+
+### TOPIC: Attribute Set ###
+EXPLANATION: Attribute sets group attributes for dependency analysis.
+COMPARISON: Unlike single attributes, sets enable complex reasoning.
+DEPTH: L2 (Understanding)
+
+### TOPIC: Functional Dependency ###
+RULE: A dependency X → Y holds if each value of X uniquely determines Y.
+PROCEDURE: 1. Compare tuples with same X. 2. Check if Y values are identical.
+DEPTH: L3 (Application)
+
+### TOPIC: Super Key ###
+RULE: A set of attributes is a super key if its closure contains all attributes.
+PROCEDURE: 1. Compute closure of attribute set. 2. Check if all attributes are included.
+DEPTH: L3 (Application)
+
+### TOPIC: Candidate Key ###
+RULE: A candidate key is a minimal super key.
+PROCEDURE: 1. Find super keys using closure. 2. Remove redundant attributes.
+DEPTH: L3 (Application)
+
+### TOPIC: Primary Key ###
+RULE: A primary key is one selected candidate key.
+PROCEDURE: 1. Identify candidate keys. 2. Choose one for implementation.
+DEPTH: L3 (Application)
+
+### TOPIC: Foreign Key ###
+RULE: A foreign key must match a primary key value or be null.
+PROCEDURE: 1. Identify referencing attribute. 2. Verify matching values exist.
+DEPTH: L3 (Application)
+
+### TOPIC: Prime Attribute ###
+RULE: An attribute is prime if it belongs to at least one candidate key.
+PROCEDURE: 1. Identify candidate keys. 2. Check attribute membership.
+DEPTH: L3 (Application)
+
+### TOPIC: Non-Prime Attribute ###
+RULE: An attribute is non-prime if it is not part of any candidate key.
+PROCEDURE: 1. Identify candidate keys. 2. List attributes not included.
+DEPTH: L3 (Application)
+
+### TOPIC: First Normal Form (1NF) ###
+RULE: A relation is in 1NF if all attributes are atomic.
+PROCEDURE: 1. Check for multi-valued attributes. 2. Convert to atomic values.
+DEPTH: L3 (Application)
+
+### TOPIC: Second Normal Form (2NF) ###
+RULE: A relation is in 2NF if no non-prime attribute depends on a subset of a candidate key.
+PROCEDURE: 1. Identify candidate keys. 2. Check for partial dependencies.
+DEPTH: L3 (Application)
+
+### TOPIC: Third Normal Form (3NF) ###
+RULE: For every FD X → Y, either X is a super key or Y is a prime attribute.
+PROCEDURE: 1. List all FDs. 2. Check if LHS is super key or RHS is prime.
+DEPTH: L3 (Application)
+
+### TOPIC: Boyce-Codd Normal Form (BCNF) ###
+RULE: For every FD X → Y, X must be a super key.
+PROCEDURE: 1. Identify FDs. 2. Verify LHS is super key for each.
+DEPTH: L3 (Application)
+
+### TOPIC: Partial Dependency ###
+RULE: A dependency is partial if a non-prime attribute depends on part of a candidate key.
+PROCEDURE: 1. Identify composite keys. 2. Check dependency on subset.
+DEPTH: L3 (Application)
+
+### TOPIC: Transitive Dependency ###
+RULE: A dependency is transitive if X → Y and Y → Z implies X → Z.
+PROCEDURE: 1. Identify intermediate dependencies. 2. Check indirect relationships.
+DEPTH: L3 (Application)
+
+### TOPIC: Determinant ###
+RULE: In X → Y, X is the determinant.
+PROCEDURE: 1. Identify functional dependencies. 2. Extract LHS.
+DEPTH: L3 (Application)
+
+### TOPIC: Attribute ###
+RULE: Attributes define properties of entities.
+PROCEDURE: 1. List columns. 2. Identify their domains.
+DEPTH: L3 (Application)
+
+### TOPIC: Tuple ###
+RULE: Each row represents a tuple.
+PROCEDURE: 1. Identify rows. 2. Treat each as a record.
+DEPTH: L3 (Application)
+
+### TOPIC: Relation ###
+RULE: A relation is a set of tuples.
+PROCEDURE: 1. Organize data into table. 2. Ensure schema consistency.
+DEPTH: L3 (Application)
+
+### TOPIC: Domain ###
+RULE: Attribute values must belong to a defined domain.
+PROCEDURE: 1. Define allowed values. 2. Validate entries.
+DEPTH: L3 (Application)
+
+### TOPIC: Cardinality ###
+RULE: Cardinality is the number of tuples.
+PROCEDURE: 1. Count rows in relation.
+DEPTH: L3 (Application)
+
+### TOPIC: Degree ###
+RULE: Degree is the number of attributes.
+PROCEDURE: 1. Count columns in relation.
+DEPTH: L3 (Application)
+
+### TOPIC: Composite Key ###
+RULE: A key is composite if it has multiple attributes.
+PROCEDURE: 1. Identify key attributes. 2. Check count > 1.
+DEPTH: L3 (Application)
+
+### TOPIC: Closure ###
+RULE: Closure determines all attributes reachable from a set.
+PROCEDURE: 1. Apply FDs iteratively. 2. Add reachable attributes.
+DEPTH: L3 (Application)
+
+### TOPIC: Trivial Dependency ###
+RULE: X → Y is trivial if Y ⊆ X.
+PROCEDURE: 1. Compare LHS and RHS. 2. Check subset relation.
+DEPTH: L3 (Application)
+
+### TOPIC: Non-Trivial Dependency ###
+RULE: X → Y is non-trivial if Y is not subset of X.
+PROCEDURE: 1. Compare LHS and RHS. 2. Check difference.
+DEPTH: L3 (Application)
+
+### TOPIC: Armstrong’s Axioms ###
+RULE: Use reflexivity, augmentation, transitivity to derive dependencies.
+PROCEDURE: 1. Apply rules step-by-step. 2. Derive new FDs.
+DEPTH: L3 (Application)
+
+### TOPIC: Reflexivity ###
+RULE: If Y ⊆ X, then X → Y.
+PROCEDURE: 1. Check subset relation. 2. Apply rule.
+DEPTH: L3 (Application)
+
+### TOPIC: Augmentation ###
+RULE: If X → Y, then XZ → YZ.
+PROCEDURE: 1. Add attributes to both sides. 2. Maintain dependency.
+DEPTH: L3 (Application)
+
+### TOPIC: Transitivity ###
+RULE: If X → Y and Y → Z, then X → Z.
+PROCEDURE: 1. Identify chain. 2. Combine dependencies.
+DEPTH: L3 (Application)
+
+### TOPIC: Lossless Join ###
+RULE: Decomposition is lossless if common attribute is a key.
+PROCEDURE: 1. Identify common attributes. 2. Check if it is a key.
+DEPTH: L3 (Application)
+
+### TOPIC: Lossy Join ###
+RULE: Decomposition is lossy if it produces spurious tuples.
+PROCEDURE: 1. Join decomposed tables. 2. Check for extra rows.
+DEPTH: L3 (Application)
+
+### TOPIC: Dependency Preservation ###
+RULE: Dependencies are preserved if enforceable without join.
+PROCEDURE: 1. Check each FD in decomposed relations.
+DEPTH: L3 (Application)
+
+### TOPIC: Redundancy ###
+RULE: Redundancy exists if same data repeats unnecessarily.
+PROCEDURE: 1. Scan data. 2. Identify duplicates.
+DEPTH: L3 (Application)
+
+### TOPIC: Insertion Anomaly ###
+RULE: Occurs when data cannot be inserted independently.
+PROCEDURE: 1. Try inserting partial data. 2. Check constraints.
+DEPTH: L3 (Application)
+
+### TOPIC: Deletion Anomaly ###
+RULE: Occurs when deleting removes unintended data.
+PROCEDURE: 1. Delete tuple. 2. Check data loss.
+DEPTH: L3 (Application)
+
+### TOPIC: Update Anomaly ###
+RULE: Occurs when updates require multiple changes.
+PROCEDURE: 1. Update value. 2. Verify consistency.
+DEPTH: L3 (Application)
+
+### TOPIC: Minimal Cover ###
+RULE: A minimal cover has no redundant dependencies.
+PROCEDURE: 1. Split FDs. 2. Remove redundant ones.
+DEPTH: L3 (Application)
+
+### TOPIC: Extraneous Attribute ###
+RULE: Attribute is extraneous if removable without changing closure.
+PROCEDURE: 1. Remove attribute. 2. Compare closure.
+DEPTH: L3 (Application)
+
+### TOPIC: Canonical Cover ###
+RULE: Canonical cover is minimal equivalent FD set.
+PROCEDURE: 1. Simplify dependencies. 2. Remove redundancy.
+DEPTH: L3 (Application)
+
+### TOPIC: Decomposition ###
+RULE: Decompose relation to eliminate anomalies.
+PROCEDURE: 1. Identify violating FD. 2. Split relation.
+DEPTH: L3 (Application)
+
+### TOPIC: Schema ###
+RULE: Schema defines structure of relation.
+PROCEDURE: 1. Define attributes. 2. Set constraints.
+DEPTH: L3 (Application)
+
+### TOPIC: Integrity Constraint ###
+RULE: Constraints ensure valid data.
+PROCEDURE: 1. Define rules. 2. Enforce during operations.
+DEPTH: L3 (Application)
+
+### TOPIC: Entity Integrity ###
+RULE: Primary key must not be null.
+PROCEDURE: 1. Check key attributes. 2. Ensure non-null.
+DEPTH: L3 (Application)
+
+### TOPIC: Referential Integrity ###
+RULE: Foreign key must reference valid primary key.
+PROCEDURE: 1. Check FK values. 2. Match with PK table.
+DEPTH: L3 (Application)
+
+### TOPIC: Multi-Valued Attribute ###
+RULE: Multi-valued attributes violate 1NF.
+PROCEDURE: 1. Identify repeating values. 2. Normalize structure.
+DEPTH: L3 (Application)
+
+### TOPIC: Normalization ###
+RULE: Apply normal forms step-by-step.
+PROCEDURE: 1. Convert to 1NF. 2. Remove partial and transitive dependencies.
+DEPTH: L3 (Application)
+
+### TOPIC: Data Integrity ###
+RULE: Data must remain accurate and consistent.
+PROCEDURE: 1. Apply constraints. 2. Validate operations.
+DEPTH: L3 (Application)
+
+### TOPIC: Dependency ###
+RULE: Dependencies define attribute relationships.
+PROCEDURE: 1. Identify relationships. 2. Apply normalization rules.
+DEPTH: L3 (Application)
+
+### TOPIC: Attribute Set ###
+RULE: Attribute sets are used to compute closures and keys.
+PROCEDURE: 1. Select attribute set. 2. Compute closure.
+DEPTH: L3 (Application)
+
+### TOPIC: Functional Dependency - Definition ###
+DEFINITION: A functional dependency X → Y exists if X uniquely determines Y.
+KEY TERMS: FD, dependency, mapping, determinant
+DEPTH: L1 (Recall)
+
+### TOPIC: Functional Dependency - Determinant ###
+DEFINITION: The left-hand side of a functional dependency is called the determinant.
+KEY TERMS: LHS, determinant
+DEPTH: L1 (Recall)
+
+### TOPIC: Functional Dependency - Dependent Attribute ###
+DEFINITION: The right-hand side of a functional dependency is the dependent attribute.
+KEY TERMS: RHS, dependent
+DEPTH: L1 (Recall)
+
+### TOPIC: Functional Dependency - Types ###
+DEFINITION: Functional dependencies include trivial, non-trivial, partial, and transitive dependencies.
+KEY TERMS: types, classification
+DEPTH: L1 (Recall)
+
+### TOPIC: Functional Dependency - Trivial Dependency ###
+DEFINITION: A dependency X → Y is trivial if Y is a subset of X.
+KEY TERMS: subset, trivial
+DEPTH: L1 (Recall)
+
+### TOPIC: Functional Dependency - Non-Trivial Dependency ###
+DEFINITION: A dependency X → Y is non-trivial if Y is not a subset of X.
+KEY TERMS: dependency, meaningful
+DEPTH: L1 (Recall)
+
+### TOPIC: Functional Dependency - Partial Dependency ###
+DEFINITION: A partial dependency occurs when a non-prime attribute depends on part of a candidate key.
+KEY TERMS: subset, candidate key
+DEPTH: L1 (Recall)
+
+### TOPIC: Functional Dependency - Transitive Dependency ###
+DEFINITION: A transitive dependency occurs when a non-prime attribute depends on another non-prime attribute.
+KEY TERMS: indirect dependency
+DEPTH: L1 (Recall)
+
+### TOPIC: Keys - Super Key ###
+DEFINITION: A super key is a set of attributes that uniquely identifies a tuple.
+KEY TERMS: uniqueness, identifier
+DEPTH: L1 (Recall)
+
+### TOPIC: Keys - Candidate Key ###
+DEFINITION: A candidate key is a minimal super key.
+KEY TERMS: minimal, uniqueness
+DEPTH: L1 (Recall)
+
+### TOPIC: Keys - Primary Key ###
+DEFINITION: A primary key is a chosen candidate key.
+KEY TERMS: unique, identifier
+DEPTH: L1 (Recall)
+
+### TOPIC: Keys - Foreign Key ###
+DEFINITION: A foreign key is an attribute that references a primary key in another relation.
+KEY TERMS: reference, relation
+DEPTH: L1 (Recall)
+
+### TOPIC: Keys - Composite Key ###
+DEFINITION: A composite key consists of more than one attribute.
+KEY TERMS: multi-attribute
+DEPTH: L1 (Recall)
+
+### TOPIC: Keys - Prime Attribute ###
+DEFINITION: A prime attribute is part of at least one candidate key.
+KEY TERMS: candidate key
+DEPTH: L1 (Recall)
+
+### TOPIC: Keys - Non-Prime Attribute ###
+DEFINITION: A non-prime attribute is not part of any candidate key.
+KEY TERMS: attribute
+DEPTH: L1 (Recall)
+
+### TOPIC: Normalization - Definition ###
+DEFINITION: Normalization is the process of organizing data to reduce redundancy.
+KEY TERMS: redundancy, structure
+DEPTH: L1 (Recall)
+
+### TOPIC: Normalization - First Normal Form (1NF) ###
+DEFINITION: A relation is in 1NF if all attributes contain atomic values.
+KEY TERMS: atomic, no repeating groups
+DEPTH: L1 (Recall)
+
+### TOPIC: Normalization - Second Normal Form (2NF) ###
+DEFINITION: A relation is in 2NF if it has no partial dependencies.
+KEY TERMS: partial dependency
+DEPTH: L1 (Recall)
+
+### TOPIC: Normalization - Third Normal Form (3NF) ###
+DEFINITION: A relation is in 3NF if for every FD X → Y, X is a super key or Y is prime.
+KEY TERMS: transitive dependency
+DEPTH: L1 (Recall)
+
+### TOPIC: Normalization - Boyce-Codd Normal Form (BCNF) ###
+DEFINITION: A relation is in BCNF if every determinant is a super key.
+KEY TERMS: determinant, super key
+DEPTH: L1 (Recall)
+
+### TOPIC: Functional Dependency - Closure ###
+DEFINITION: Closure of an attribute set is the set of attributes it determines.
+KEY TERMS: closure, X+
+DEPTH: L1 (Recall)
+
+### TOPIC: Functional Dependency - Armstrong’s Axioms ###
+DEFINITION: Armstrong’s axioms are rules used to derive functional dependencies.
+KEY TERMS: reflexivity, augmentation, transitivity
+DEPTH: L1 (Recall)
+
+### TOPIC: Functional Dependency - Reflexivity ###
+DEFINITION: If Y is a subset of X, then X → Y holds.
+KEY TERMS: subset
+DEPTH: L1 (Recall)
+
+### TOPIC: Functional Dependency - Augmentation ###
+DEFINITION: If X → Y, then XZ → YZ.
+KEY TERMS: extension
+DEPTH: L1 (Recall)
+
+### TOPIC: Functional Dependency - Transitivity ###
+DEFINITION: If X → Y and Y → Z, then X → Z.
+KEY TERMS: chain
+DEPTH: L1 (Recall)
+
+### TOPIC: Decomposition - Definition ###
+DEFINITION: Decomposition is splitting a relation into smaller relations.
+KEY TERMS: split
+DEPTH: L1 (Recall)
+
+### TOPIC: Decomposition - Lossless Join ###
+DEFINITION: A decomposition is lossless if joining relations gives original relation.
+KEY TERMS: no spurious tuples
+DEPTH: L1 (Recall)
+
+### TOPIC: Decomposition - Lossy Join ###
+DEFINITION: A decomposition is lossy if joining relations produces incorrect tuples.
+KEY TERMS: spurious tuples
+DEPTH: L1 (Recall)
+
+### TOPIC: Decomposition - Dependency Preservation ###
+DEFINITION: A decomposition preserves dependencies if all FDs can be enforced without join.
+KEY TERMS: preservation
+DEPTH: L1 (Recall)
+
+### TOPIC: Anomalies - Insertion Anomaly ###
+DEFINITION: Insertion anomaly occurs when data cannot be inserted independently.
+KEY TERMS: insertion
+DEPTH: L1 (Recall)
+
+### TOPIC: Anomalies - Deletion Anomaly ###
+DEFINITION: Deletion anomaly occurs when deleting data removes additional information.
+KEY TERMS: deletion
+DEPTH: L1 (Recall)
+
+### TOPIC: Anomalies - Update Anomaly ###
+DEFINITION: Update anomaly occurs when multiple updates are required for consistency.
+KEY TERMS: update
+DEPTH: L1 (Recall)
+
+### TOPIC: Database Concepts - Relation ###
+DEFINITION: A relation is a table consisting of rows and columns.
+KEY TERMS: table
+DEPTH: L1 (Recall)
+
+### TOPIC: Database Concepts - Tuple ###
+DEFINITION: A tuple is a row in a relation.
+KEY TERMS: record
+DEPTH: L1 (Recall)
+
+### TOPIC: Database Concepts - Attribute ###
+DEFINITION: An attribute is a column in a relation.
+KEY TERMS: column
+DEPTH: L1 (Recall)
+
+### TOPIC: Database Concepts - Domain ###
+DEFINITION: A domain is the set of allowed values for an attribute.
+KEY TERMS: values
+DEPTH: L1 (Recall)
+
+### TOPIC: Database Concepts - Schema ###
+DEFINITION: Schema defines the structure of a database.
+KEY TERMS: structure
+DEPTH: L1 (Recall)
+
+### TOPIC: Database Concepts - Cardinality ###
+DEFINITION: Cardinality is the number of tuples in a relation.
+KEY TERMS: rows
+DEPTH: L1 (Recall)
+
+### TOPIC: Database Concepts - Degree ###
+DEFINITION: Degree is the number of attributes in a relation.
+KEY TERMS: columns
+DEPTH: L1 (Recall)
+
+### TOPIC: Functional Dependency - Concept ###
+EXPLANATION: Functional dependency defines how attributes are related and is the foundation for identifying keys and normalization rules.
+COMPARISON: Unlike independent attributes, dependencies introduce relationships used in schema design.
+DEPTH: L2 (Understanding)
+
+### TOPIC: Functional Dependency - Determinant Role ###
+EXPLANATION: Determinants control how data is structured since they define which attributes influence others.
+COMPARISON: Unlike dependent attributes, determinants act as the source of dependency.
+DEPTH: L2 (Understanding)
+
+### TOPIC: Functional Dependency - Trivial vs Non-Trivial ###
+EXPLANATION: Trivial dependencies do not add new information, while non-trivial dependencies represent meaningful relationships.
+COMPARISON: Unlike trivial dependencies, non-trivial dependencies impact normalization decisions.
+DEPTH: L2 (Understanding)
+
+### TOPIC: Functional Dependency - Partial Dependency ###
+EXPLANATION: Partial dependency leads to redundancy because attributes depend only on part of a candidate key.
+COMPARISON: Unlike full dependency, it violates 2NF.
+DEPTH: L2 (Understanding)
+
+### TOPIC: Functional Dependency - Transitive Dependency ###
+EXPLANATION: Transitive dependency introduces indirect relationships that cause redundancy and update anomalies.
+COMPARISON: Unlike direct dependency, it creates multi-step dependency chains.
+DEPTH: L2 (Understanding)
+
+### TOPIC: Keys - Super Key ###
+EXPLANATION: A super key ensures uniqueness but may include unnecessary attributes.
+COMPARISON: Unlike candidate keys, it is not minimal.
+DEPTH: L2 (Understanding)
+
+### TOPIC: Keys - Candidate Key ###
+EXPLANATION: A candidate key is minimal and ensures uniqueness without redundancy.
+COMPARISON: Unlike super keys, it removes extra attributes.
+DEPTH: L2 (Understanding)
+
+### TOPIC: Keys - Candidate Key vs Primary Key ###
+EXPLANATION: Candidate keys represent all possible minimal keys, while the primary key is one chosen for implementation.
+COMPARISON: Unlike candidate keys, only one primary key is selected.
+DEPTH: L2 (Understanding)
+
+### TOPIC: Keys - Composite Key ###
+EXPLANATION: Composite keys are used when a single attribute cannot uniquely identify tuples.
+COMPARISON: Unlike single keys, they combine multiple attributes for uniqueness.
+DEPTH: L2 (Understanding)
+
+### TOPIC: Keys - Prime vs Non-Prime Attributes ###
+EXPLANATION: Prime attributes belong to candidate keys, while non-prime attributes depend on keys.
+COMPARISON: Unlike prime attributes, non-prime attributes are more prone to redundancy.
+DEPTH: L2 (Understanding)
+
+### TOPIC: Normalization - Concept ###
+EXPLANATION: Normalization organizes data to minimize redundancy and improve consistency.
+COMPARISON: Unlike unnormalized data, it reduces anomalies.
+DEPTH: L2 (Understanding)
+
+### TOPIC: Normalization - First Normal Form (1NF) ###
+EXPLANATION: 1NF ensures atomicity by removing repeating groups and multi-valued attributes.
+COMPARISON: Unlike unnormalized relations, it enforces a structured format.
+DEPTH: L2 (Understanding)
+
+### TOPIC: Normalization - Second Normal Form (2NF) ###
+EXPLANATION: 2NF removes partial dependencies so that non-prime attributes depend fully on the candidate key.
+COMPARISON: Unlike 1NF, it addresses dependency issues.
+DEPTH: L2 (Understanding)
+
+### TOPIC: Normalization - Third Normal Form (3NF) ###
+EXPLANATION: 3NF removes transitive dependencies to ensure attributes depend only on candidate keys.
+COMPARISON: Unlike 2NF, it eliminates indirect dependencies.
+DEPTH: L2 (Understanding)
+
+### TOPIC: Normalization - Boyce-Codd Normal Form (BCNF) ###
+EXPLANATION: BCNF ensures that every determinant is a super key, making it stricter than 3NF.
+COMPARISON: Unlike 3NF, it does not allow exceptions for prime attributes.
+DEPTH: L2 (Understanding)
+
+### TOPIC: Functional Dependency - Closure ###
+EXPLANATION: Closure determines all attributes that can be derived from a given set using dependencies.
+COMPARISON: Unlike direct dependency checks, closure provides complete reachability.
+DEPTH: L2 (Understanding)
+
+### TOPIC: Functional Dependency - Armstrong’s Axioms ###
+EXPLANATION: Armstrong’s axioms provide formal rules to derive new dependencies from existing ones.
+COMPARISON: Unlike informal reasoning, they ensure correctness.
+DEPTH: L2 (Understanding)
+
+### TOPIC: Functional Dependency - Reflexivity ###
+EXPLANATION: Reflexivity states that attributes always determine themselves.
+COMPARISON: Unlike other rules, it is always valid.
+DEPTH: L2 (Understanding)
+
+### TOPIC: Functional Dependency - Augmentation ###
+EXPLANATION: Augmentation extends dependencies by adding attributes to both sides.
+COMPARISON: Unlike transitivity, it does not create new chains.
+DEPTH: L2 (Understanding)
+
+### TOPIC: Functional Dependency - Transitivity ###
+EXPLANATION: Transitivity allows deriving indirect dependencies through chaining.
+COMPARISON: Unlike augmentation, it connects dependencies.
+DEPTH: L2 (Understanding)
+
+### TOPIC: Decomposition - Concept ###
+EXPLANATION: Decomposition breaks relations into smaller ones to remove redundancy.
+COMPARISON: Unlike original relations, decomposed ones improve structure.
+DEPTH: L2 (Understanding)
+
+### TOPIC: Decomposition - Lossless Join ###
+EXPLANATION: Lossless join ensures that decomposed relations can reconstruct original data without errors.
+COMPARISON: Unlike lossy join, it avoids spurious tuples.
+DEPTH: L2 (Understanding)
+
+### TOPIC: Decomposition - Lossy Join ###
+EXPLANATION: Lossy join introduces incorrect tuples when reconstructing data.
+COMPARISON: Unlike lossless join, it distorts original data.
+DEPTH: L2 (Understanding)
+
+### TOPIC: Decomposition - Dependency Preservation ###
+EXPLANATION: Dependency preservation ensures all constraints remain enforceable after decomposition.
+COMPARISON: Unlike non-preserving decomposition, it avoids recomputation using joins.
+DEPTH: L2 (Understanding)
+
+### TOPIC: Anomalies - Insertion Anomaly ###
+EXPLANATION: Occurs when inserting new data requires unrelated information.
+COMPARISON: Unlike normalized tables, it restricts flexibility.
+DEPTH: L2 (Understanding)
+
+### TOPIC: Anomalies - Deletion Anomaly ###
+EXPLANATION: Occurs when deleting data removes additional important information.
+COMPARISON: Unlike proper design, it leads to unintended data loss.
+DEPTH: L2 (Understanding)
+
+### TOPIC: Anomalies - Update Anomaly ###
+EXPLANATION: Occurs when multiple updates are required to maintain consistency.
+COMPARISON: Unlike normalized design, it causes inconsistency.
+DEPTH: L2 (Understanding)
+
+### TOPIC: Database Concepts - Relation ###
+EXPLANATION: A relation organizes data into structured rows and columns.
+COMPARISON: Unlike unstructured data, it enforces schema.
+DEPTH: L2 (Understanding)
+
+### TOPIC: Database Concepts - Tuple ###
+EXPLANATION: A tuple represents a single data record in a relation.
+COMPARISON: Unlike attributes, tuples store actual values.
+DEPTH: L2 (Understanding)
+
+### TOPIC: Database Concepts - Attribute ###
+EXPLANATION: Attributes define the properties of entities.
+COMPARISON: Unlike tuples, they describe structure.
+DEPTH: L2 (Understanding)
+
+### TOPIC: Database Concepts - Domain ###
+EXPLANATION: Domains restrict attribute values to valid ranges.
+COMPARISON: Unlike unrestricted attributes, domains enforce constraints.
+DEPTH: L2 (Understanding)
+
+### TOPIC: Database Concepts - Schema ###
+EXPLANATION: Schema defines the structure and constraints of a database.
+COMPARISON: Unlike data, schema defines organization.
+DEPTH: L2 (Understanding)
+
+### TOPIC: Functional Dependency - Validation ###
+RULE: A dependency X → Y holds if each value of X maps to exactly one value of Y.
+PROCEDURE: 1. Group tuples by X. 2. Check if Y values are identical.
+DEPTH: L3 (Application)
+
+### TOPIC: Functional Dependency - Violation Detection ###
+RULE: A dependency is violated if the same X value maps to different Y values.
+PROCEDURE: 1. Find tuples with same X. 2. Compare Y values.
+DEPTH: L3 (Application)
+
+### TOPIC: Functional Dependency - Closure Computation ###
+RULE: Closure of X includes all attributes determined using FDs.
+PROCEDURE: 1. Start with X. 2. Apply FDs iteratively until no change.
+DEPTH: L3 (Application)
+
+### TOPIC: Functional Dependency - Transitive Rule Application ###
+RULE: If X → Y and Y → Z, then X → Z.
+PROCEDURE: 1. Identify dependency chain. 2. Apply transitivity.
+DEPTH: L3 (Application)
+
+### TOPIC: Functional Dependency - Partial Dependency Detection ###
+RULE: A dependency is partial if a non-prime attribute depends on part of a candidate key.
+PROCEDURE: 1. Identify candidate key. 2. Check subset dependencies.
+DEPTH: L3 (Application)
+
+### TOPIC: Functional Dependency - Redundancy Check ###
+RULE: A dependency is redundant if it can be derived from others.
+PROCEDURE: 1. Remove FD. 2. Check if closure remains unchanged.
+DEPTH: L3 (Application)
+
+### TOPIC: Functional Dependency - Minimal Cover Step ###
+RULE: Dependencies must be reduced to minimal form.
+PROCEDURE: 1. Split RHS. 2. Remove extraneous attributes.
+DEPTH: L3 (Application)
+
+### TOPIC: Functional Dependency - Example Solving ###
+RULE: Derived dependencies can be computed using given FDs.
+PROCEDURE: 1. Given A → B and B → C. 2. Conclude A → C.
+DEPTH: L3 (Application)
+
+### TOPIC: Functional Dependency - Validation ###
+RULE: A dependency X → Y holds if each value of X maps to exactly one value of Y.
+PROCEDURE: 1. Group tuples by X. 2. Check if Y values are identical.
+DEPTH: L3 (Application)
+
+### TOPIC: Functional Dependency - Violation Detection ###
+RULE: A dependency is violated if the same X value maps to different Y values.
+PROCEDURE: 1. Find tuples with same X. 2. Compare Y values.
+DEPTH: L3 (Application)
+
+### TOPIC: Functional Dependency - Closure Computation ###
+RULE: Closure of X includes all attributes determined using FDs.
+PROCEDURE: 1. Start with X. 2. Apply FDs iteratively.
+DEPTH: L3 (Application)
+
+### TOPIC: Keys - Super Key Identification ###
+RULE: A set is a super key if its closure contains all attributes.
+PROCEDURE: 1. Compute closure. 2. Check if all attributes are included.
+DEPTH: L3 (Application)
+
+### TOPIC: Keys - Super Key Redundancy Check ###
+RULE: A super key may contain unnecessary attributes.
+PROCEDURE: 1. Remove attribute. 2. Check if still super key.
+DEPTH: L3 (Application)
+
+### TOPIC: Keys - Candidate Key Identification ###
+RULE: A candidate key is a minimal super key.
+PROCEDURE: 1. Find super keys. 2. Remove redundant attributes.
+DEPTH: L3 (Application)
+
+### TOPIC: Keys - Candidate Key Validation ###
+RULE: Closure of candidate key must include all attributes.
+PROCEDURE: 1. Compute closure. 2. Verify completeness.
+DEPTH: L3 (Application)
+
+### TOPIC: Keys - Primary Key Selection ###
+RULE: A primary key is chosen from candidate keys.
+PROCEDURE: 1. Identify candidate keys. 2. Select one.
+DEPTH: L3 (Application)
+
+### TOPIC: Keys - Primary Key Validation ###
+RULE: Primary key must uniquely identify tuples.
+PROCEDURE: 1. Check uniqueness. 2. Ensure no duplicates.
+DEPTH: L3 (Application)
+
+### TOPIC: Keys - Foreign Key Validation ###
+RULE: Foreign key must match primary key or be null.
+PROCEDURE: 1. Identify FK values. 2. Match with PK.
+DEPTH: L3 (Application)
+
+### TOPIC: Keys - Referential Integrity Check ###
+RULE: FK violation occurs if referenced value does not exist.
+PROCEDURE: 1. Compare FK table. 2. Validate references.
+DEPTH: L3 (Application)
+
+### TOPIC: Normalization - 1NF Atomicity Check ###
+RULE: A relation is in 1NF if all attributes are atomic.
+PROCEDURE: 1. Identify multi-valued attributes. 2. Convert to atomic.
+DEPTH: L3 (Application)
+
+### TOPIC: Normalization - 1NF Violation Detection ###
+RULE: Multiple values in a single cell violate 1NF.
+PROCEDURE: 1. Scan rows. 2. Detect repeating groups.
+DEPTH: L3 (Application)
+
+### TOPIC: Normalization - 2NF Partial Dependency Detection ###
+RULE: A dependency is partial if non-prime attribute depends on part of candidate key.
+PROCEDURE: 1. Identify composite key. 2. Check subset dependency.
+DEPTH: L3 (Application)
+
+### TOPIC: Normalization - 2NF Conversion ###
+RULE: Remove partial dependencies to achieve 2NF.
+PROCEDURE: 1. Decompose relation. 2. Separate dependent attributes.
+DEPTH: L3 (Application)
+
+### TOPIC: Normalization - 3NF Transitive Dependency Detection ###
+RULE: A dependency is transitive if X → Y and Y → Z.
+PROCEDURE: 1. Identify indirect dependencies. 2. Check chains.
+DEPTH: L3 (Application)
+
+### TOPIC: Normalization - 3NF Validation ###
+RULE: For X → Y, X must be super key or Y must be prime.
+PROCEDURE: 1. List FDs. 2. Verify condition.
+DEPTH: L3 (Application)
+
+### TOPIC: Normalization - BCNF Violation Detection ###
+RULE: BCNF is violated if determinant is not a super key.
+PROCEDURE: 1. Identify FDs. 2. Check LHS closure.
+DEPTH: L3 (Application)
+
+### TOPIC: Normalization - BCNF Decomposition ###
+RULE: Decompose relation to satisfy BCNF.
+PROCEDURE: 1. Identify violating FD. 2. Split relation.
+DEPTH: L3 (Application)
+
+### TOPIC: Functional Dependency - Closure Computation ###
+RULE: Closure determines all reachable attributes.
+PROCEDURE: 1. Start with attribute set. 2. Apply FDs iteratively.
+DEPTH: L3 (Application)
+
+### TOPIC: Functional Dependency - Closure-based Key Check ###
+RULE: If closure contains all attributes → super key.
+PROCEDURE: 1. Compute closure. 2. Verify completeness.
+DEPTH: L3 (Application)
+
+### TOPIC: Decomposition - Lossless Join Check ###
+RULE: Decomposition is lossless if common attribute is key.
+PROCEDURE: 1. Identify intersection. 2. Check key property.
+DEPTH: L3 (Application)
+
+### TOPIC: Decomposition - Lossless Validation ###
+RULE: Join should not create spurious tuples.
+PROCEDURE: 1. Join tables. 2. Compare with original.
+DEPTH: L3 (Application)
+
+### TOPIC: Functional Dependency - Minimal Cover Creation ###
+RULE: Minimal cover removes redundant dependencies.
+PROCEDURE: 1. Split RHS. 2. Remove redundancy.
+DEPTH: L3 (Application)
+
+### TOPIC: Functional Dependency - Extraneous Attribute Removal ###
+RULE: Attribute is extraneous if removable without changing closure.
+PROCEDURE: 1. Remove attribute. 2. Compare closure.
+DEPTH: L3 (Application)
+
+### TOPIC: Functional Dependency - Definition ###
+DEFINITION: A functional dependency X → Y exists if X uniquely determines Y.
+KEY TERMS: FD, dependency, mapping, determinant
+DEPTH: L1 (Recall)
+
+### TOPIC: Functional Dependency - Determinant ###
+DEFINITION: The left-hand side of a functional dependency is called the determinant.
+KEY TERMS: LHS, determinant
+DEPTH: L1 (Recall)
+
+### TOPIC: Functional Dependency - Dependent Attribute ###
+DEFINITION: The right-hand side of a functional dependency is the dependent attribute.
+KEY TERMS: RHS, dependent
+DEPTH: L1 (Recall)
+
+### TOPIC: Functional Dependency - Types ###
+DEFINITION: Functional dependencies include trivial, non-trivial, partial, and transitive dependencies.
+KEY TERMS: types, classification
+DEPTH: L1 (Recall)
+
+### TOPIC: Functional Dependency - Trivial Dependency ###
+DEFINITION: A dependency X → Y is trivial if Y is a subset of X.
+KEY TERMS: subset, trivial
+DEPTH: L1 (Recall)
+
+### TOPIC: Functional Dependency - Non-Trivial Dependency ###
+DEFINITION: A dependency X → Y is non-trivial if Y is not a subset of X.
+KEY TERMS: dependency, meaningful
+DEPTH: L1 (Recall)
+
+### TOPIC: Functional Dependency - Partial Dependency ###
+DEFINITION: A partial dependency occurs when a non-prime attribute depends on part of a candidate key.
+KEY TERMS: subset, candidate key
+DEPTH: L1 (Recall)
+
+### TOPIC: Functional Dependency - Transitive Dependency ###
+DEFINITION: A transitive dependency occurs when a non-prime attribute depends on another non-prime attribute.
+KEY TERMS: indirect dependency
+DEPTH: L1 (Recall)
+
+### TOPIC: Keys - Super Key ###
+DEFINITION: A super key is a set of attributes that uniquely identifies a tuple.
+KEY TERMS: uniqueness, identifier
+DEPTH: L1 (Recall)
+
+### TOPIC: Keys - Candidate Key ###
+DEFINITION: A candidate key is a minimal super key.
+KEY TERMS: minimal, uniqueness
+DEPTH: L1 (Recall)
+
+### TOPIC: Keys - Primary Key ###
+DEFINITION: A primary key is a chosen candidate key.
+KEY TERMS: unique, identifier
+DEPTH: L1 (Recall)
+
+### TOPIC: Keys - Foreign Key ###
+DEFINITION: A foreign key is an attribute that references a primary key in another relation.
+KEY TERMS: reference, relation
+DEPTH: L1 (Recall)
+
+### TOPIC: Keys - Composite Key ###
+DEFINITION: A composite key consists of more than one attribute.
+KEY TERMS: multi-attribute
+DEPTH: L1 (Recall)
+
+### TOPIC: Keys - Prime Attribute ###
+DEFINITION: A prime attribute is part of at least one candidate key.
+KEY TERMS: candidate key
+DEPTH: L1 (Recall)
+
+### TOPIC: Keys - Non-Prime Attribute ###
+DEFINITION: A non-prime attribute is not part of any candidate key.
+KEY TERMS: attribute
+DEPTH: L1 (Recall)
+
+### TOPIC: Normalization - Definition ###
+DEFINITION: Normalization is the process of organizing data to reduce redundancy.
+KEY TERMS: redundancy, structure
+DEPTH: L1 (Recall)
+
+### TOPIC: Normalization - First Normal Form (1NF) ###
+DEFINITION: A relation is in 1NF if all attributes contain atomic values.
+KEY TERMS: atomic, no repeating groups
+DEPTH: L1 (Recall)
+
+### TOPIC: Normalization - Second Normal Form (2NF) ###
+DEFINITION: A relation is in 2NF if it has no partial dependencies.
+KEY TERMS: partial dependency
+DEPTH: L1 (Recall)
+
+### TOPIC: Normalization - Third Normal Form (3NF) ###
+DEFINITION: A relation is in 3NF if for every FD X → Y, X is a super key or Y is prime.
+KEY TERMS: transitive dependency
+DEPTH: L1 (Recall)
+
+### TOPIC: Normalization - Boyce-Codd Normal Form (BCNF) ###
+DEFINITION: A relation is in BCNF if every determinant is a super key.
+KEY TERMS: determinant, super key
+DEPTH: L1 (Recall)
+
+### TOPIC: Functional Dependency - Closure ###
+DEFINITION: Closure of an attribute set is the set of attributes it determines.
+KEY TERMS: closure, X+
+DEPTH: L1 (Recall)
+
+### TOPIC: Functional Dependency - Armstrong’s Axioms ###
+DEFINITION: Armstrong’s axioms are rules used to derive functional dependencies.
+KEY TERMS: reflexivity, augmentation, transitivity
+DEPTH: L1 (Recall)
+
+### TOPIC: Functional Dependency - Reflexivity ###
+DEFINITION: If Y is a subset of X, then X → Y holds.
+KEY TERMS: subset
+DEPTH: L1 (Recall)
+
+### TOPIC: Functional Dependency - Augmentation ###
+DEFINITION: If X → Y, then XZ → YZ.
+KEY TERMS: extension
+DEPTH: L1 (Recall)
+
+### TOPIC: Functional Dependency - Transitivity ###
+DEFINITION: If X → Y and Y → Z, then X → Z.
+KEY TERMS: chain
+DEPTH: L1 (Recall)
+
+### TOPIC: Decomposition - Definition ###
+DEFINITION: Decomposition is splitting a relation into smaller relations.
+KEY TERMS: split
+DEPTH: L1 (Recall)
+
+### TOPIC: Decomposition - Lossless Join ###
+DEFINITION: A decomposition is lossless if joining relations gives original relation.
+KEY TERMS: no spurious tuples
+DEPTH: L1 (Recall)
+
+### TOPIC: Decomposition - Lossy Join ###
+DEFINITION: A decomposition is lossy if joining relations produces incorrect tuples.
+KEY TERMS: spurious tuples
+DEPTH: L1 (Recall)
+
+### TOPIC: Decomposition - Dependency Preservation ###
+DEFINITION: A decomposition preserves dependencies if all FDs can be enforced without join.
+KEY TERMS: preservation
+DEPTH: L1 (Recall)
+
+### TOPIC: Anomalies - Insertion Anomaly ###
+DEFINITION: Insertion anomaly occurs when data cannot be inserted independently.
+KEY TERMS: insertion
+DEPTH: L1 (Recall)
+
+### TOPIC: Anomalies - Deletion Anomaly ###
+DEFINITION: Deletion anomaly occurs when deleting data removes additional information.
+KEY TERMS: deletion
+DEPTH: L1 (Recall)
+
+### TOPIC: Anomalies - Update Anomaly ###
+DEFINITION: Update anomaly occurs when multiple updates are required for consistency.
+KEY TERMS: update
+DEPTH: L1 (Recall)
+
+### TOPIC: Database Concepts - Relation ###
+DEFINITION: A relation is a table consisting of rows and columns.
+KEY TERMS: table
+DEPTH: L1 (Recall)
+
+### TOPIC: Database Concepts - Tuple ###
+DEFINITION: A tuple is a row in a relation.
+KEY TERMS: record
+DEPTH: L1 (Recall)
+
+### TOPIC: Database Concepts - Attribute ###
+DEFINITION: An attribute is a column in a relation.
+KEY TERMS: column
+DEPTH: L1 (Recall)
+
+### TOPIC: Database Concepts - Domain ###
+DEFINITION: A domain is the set of allowed values for an attribute.
+KEY TERMS: values
+DEPTH: L1 (Recall)
+
+### TOPIC: Database Concepts - Schema ###
+DEFINITION: Schema defines the structure of a database.
+KEY TERMS: structure
+DEPTH: L1 (Recall)
+
+### TOPIC: Database Concepts - Cardinality ###
+DEFINITION: Cardinality is the number of tuples in a relation.
+KEY TERMS: rows
+DEPTH: L1 (Recall)
+
+### TOPIC: Database Concepts - Degree ###
+DEFINITION: Degree is the number of attributes in a relation.
+KEY TERMS: columns
+DEPTH: L1 (Recall)
+
+### TOPIC: Functional Dependency - Concept ###
+EXPLANATION: Functional dependency defines how attributes are related and is the foundation for identifying keys and normalization rules.
+COMPARISON: Unlike independent attributes, dependencies introduce relationships used in schema design.
+DEPTH: L2 (Understanding)
+
+### TOPIC: Functional Dependency - Determinant Role ###
+EXPLANATION: Determinants control how data is structured since they define which attributes influence others.
+COMPARISON: Unlike dependent attributes, determinants act as the source of dependency.
+DEPTH: L2 (Understanding)
+
+### TOPIC: Functional Dependency - Trivial vs Non-Trivial ###
+EXPLANATION: Trivial dependencies do not add new information, while non-trivial dependencies represent meaningful relationships.
+COMPARISON: Unlike trivial dependencies, non-trivial dependencies impact normalization decisions.
+DEPTH: L2 (Understanding)
+
+### TOPIC: Functional Dependency - Partial Dependency ###
+EXPLANATION: Partial dependency leads to redundancy because attributes depend only on part of a candidate key.
+COMPARISON: Unlike full dependency, it violates 2NF.
+DEPTH: L2 (Understanding)
+
+### TOPIC: Functional Dependency - Transitive Dependency ###
+EXPLANATION: Transitive dependency introduces indirect relationships that cause redundancy and update anomalies.
+COMPARISON: Unlike direct dependency, it creates multi-step dependency chains.
+DEPTH: L2 (Understanding)
+
+### TOPIC: Keys - Super Key ###
+EXPLANATION: A super key ensures uniqueness but may include unnecessary attributes.
+COMPARISON: Unlike candidate keys, it is not minimal.
+DEPTH: L2 (Understanding)
+
+### TOPIC: Keys - Candidate Key ###
+EXPLANATION: A candidate key is minimal and ensures uniqueness without redundancy.
+COMPARISON: Unlike super keys, it removes extra attributes.
+DEPTH: L2 (Understanding)
+
+### TOPIC: Keys - Candidate Key vs Primary Key ###
+EXPLANATION: Candidate keys represent all possible minimal keys, while the primary key is one chosen for implementation.
+COMPARISON: Unlike candidate keys, only one primary key is selected.
+DEPTH: L2 (Understanding)
+
+### TOPIC: Keys - Composite Key ###
+EXPLANATION: Composite keys are used when a single attribute cannot uniquely identify tuples.
+COMPARISON: Unlike single keys, they combine multiple attributes for uniqueness.
+DEPTH: L2 (Understanding)
+
+### TOPIC: Keys - Prime vs Non-Prime Attributes ###
+EXPLANATION: Prime attributes belong to candidate keys, while non-prime attributes depend on keys.
+COMPARISON: Unlike prime attributes, non-prime attributes are more prone to redundancy.
+DEPTH: L2 (Understanding)
+
+### TOPIC: Normalization - Concept ###
+EXPLANATION: Normalization organizes data to minimize redundancy and improve consistency.
+COMPARISON: Unlike unnormalized data, it reduces anomalies.
+DEPTH: L2 (Understanding)
+
+### TOPIC: Normalization - First Normal Form (1NF) ###
+EXPLANATION: 1NF ensures atomicity by removing repeating groups and multi-valued attributes.
+COMPARISON: Unlike unnormalized relations, it enforces a structured format.
+DEPTH: L2 (Understanding)
+
+### TOPIC: Normalization - Second Normal Form (2NF) ###
+EXPLANATION: 2NF removes partial dependencies so that non-prime attributes depend fully on the candidate key.
+COMPARISON: Unlike 1NF, it addresses dependency issues.
+DEPTH: L2 (Understanding)
+
+### TOPIC: Normalization - Third Normal Form (3NF) ###
+EXPLANATION: 3NF removes transitive dependencies to ensure attributes depend only on candidate keys.
+COMPARISON: Unlike 2NF, it eliminates indirect dependencies.
+DEPTH: L2 (Understanding)
+
+### TOPIC: Normalization - Boyce-Codd Normal Form (BCNF) ###
+EXPLANATION: BCNF ensures that every determinant is a super key, making it stricter than 3NF.
+COMPARISON: Unlike 3NF, it does not allow exceptions for prime attributes.
+DEPTH: L2 (Understanding)
+
+### TOPIC: Functional Dependency - Closure ###
+EXPLANATION: Closure determines all attributes that can be derived from a given set using dependencies.
+COMPARISON: Unlike direct dependency checks, closure provides complete reachability.
+DEPTH: L2 (Understanding)
+
+### TOPIC: Functional Dependency - Armstrong’s Axioms ###
+EXPLANATION: Armstrong’s axioms provide formal rules to derive new dependencies from existing ones.
+COMPARISON: Unlike informal reasoning, they ensure correctness.
+DEPTH: L2 (Understanding)
+
+### TOPIC: Functional Dependency - Reflexivity ###
+EXPLANATION: Reflexivity states that attributes always determine themselves.
+COMPARISON: Unlike other rules, it is always valid.
+DEPTH: L2 (Understanding)
+
+### TOPIC: Functional Dependency - Augmentation ###
+EXPLANATION: Augmentation extends dependencies by adding attributes to both sides.
+COMPARISON: Unlike transitivity, it does not create new chains.
+DEPTH: L2 (Understanding)
+
+### TOPIC: Functional Dependency - Transitivity ###
+EXPLANATION: Transitivity allows deriving indirect dependencies through chaining.
+COMPARISON: Unlike augmentation, it connects dependencies.
+DEPTH: L2 (Understanding)
+
+### TOPIC: Decomposition - Concept ###
+EXPLANATION: Decomposition breaks relations into smaller ones to remove redundancy.
+COMPARISON: Unlike original relations, decomposed ones improve structure.
+DEPTH: L2 (Understanding)
+
+### TOPIC: Decomposition - Lossless Join ###
+EXPLANATION: Lossless join ensures that decomposed relations can reconstruct original data without errors.
+COMPARISON: Unlike lossy join, it avoids spurious tuples.
+DEPTH: L2 (Understanding)
+
+### TOPIC: Decomposition - Lossy Join ###
+EXPLANATION: Lossy join introduces incorrect tuples when reconstructing data.
+COMPARISON: Unlike lossless join, it distorts original data.
+DEPTH: L2 (Understanding)
+
+### TOPIC: Decomposition - Dependency Preservation ###
+EXPLANATION: Dependency preservation ensures all constraints remain enforceable after decomposition.
+COMPARISON: Unlike non-preserving decomposition, it avoids recomputation using joins.
+DEPTH: L2 (Understanding)
+
+### TOPIC: Anomalies - Insertion Anomaly ###
+EXPLANATION: Occurs when inserting new data requires unrelated information.
+COMPARISON: Unlike normalized tables, it restricts flexibility.
+DEPTH: L2 (Understanding)
+
+### TOPIC: Anomalies - Deletion Anomaly ###
+EXPLANATION: Occurs when deleting data removes additional important information.
+COMPARISON: Unlike proper design, it leads to unintended data loss.
+DEPTH: L2 (Understanding)
+
+### TOPIC: Anomalies - Update Anomaly ###
+EXPLANATION: Occurs when multiple updates are required to maintain consistency.
+COMPARISON: Unlike normalized design, it causes inconsistency.
+DEPTH: L2 (Understanding)
+
+### TOPIC: Database Concepts - Relation ###
+EXPLANATION: A relation organizes data into structured rows and columns.
+COMPARISON: Unlike unstructured data, it enforces schema.
+DEPTH: L2 (Understanding)
+
+### TOPIC: Database Concepts - Tuple ###
+EXPLANATION: A tuple represents a single data record in a relation.
+COMPARISON: Unlike attributes, tuples store actual values.
+DEPTH: L2 (Understanding)
+
+### TOPIC: Database Concepts - Attribute ###
+EXPLANATION: Attributes define the properties of entities.
+COMPARISON: Unlike tuples, they describe structure.
+DEPTH: L2 (Understanding)
+
+### TOPIC: Database Concepts - Domain ###
+EXPLANATION: Domains restrict attribute values to valid ranges.
+COMPARISON: Unlike unrestricted attributes, domains enforce constraints.
+DEPTH: L2 (Understanding)
+
+### TOPIC: Database Concepts - Schema ###
+EXPLANATION: Schema defines the structure and constraints of a database.
+COMPARISON: Unlike data, schema defines organization.
+DEPTH: L2 (Understanding)
+
+### TOPIC: Functional Dependency - Validation ###
+RULE: A dependency X → Y holds if each value of X maps to exactly one value of Y.
+PROCEDURE: 1. Group tuples by X. 2. Check if Y values are identical.
+DEPTH: L3 (Application)
+
+### TOPIC: Functional Dependency - Violation Detection ###
+RULE: A dependency is violated if the same X value maps to different Y values.
+PROCEDURE: 1. Find tuples with same X. 2. Compare Y values.
+DEPTH: L3 (Application)
+
+### TOPIC: Functional Dependency - Closure Computation ###
+RULE: Closure of X includes all attributes determined using FDs.
+PROCEDURE: 1. Start with X. 2. Apply FDs iteratively until no change.
+DEPTH: L3 (Application)
+
+### TOPIC: Functional Dependency - Transitive Rule Application ###
+RULE: If X → Y and Y → Z, then X → Z.
+PROCEDURE: 1. Identify dependency chain. 2. Apply transitivity.
+DEPTH: L3 (Application)
+
+### TOPIC: Functional Dependency - Partial Dependency Detection ###
+RULE: A dependency is partial if a non-prime attribute depends on part of a candidate key.
+PROCEDURE: 1. Identify candidate key. 2. Check subset dependencies.
+DEPTH: L3 (Application)
+
+### TOPIC: Functional Dependency - Redundancy Check ###
+RULE: A dependency is redundant if it can be derived from others.
+PROCEDURE: 1. Remove FD. 2. Check if closure remains unchanged.
+DEPTH: L3 (Application)
+
+### TOPIC: Functional Dependency - Minimal Cover Step ###
+RULE: Dependencies must be reduced to minimal form.
+PROCEDURE: 1. Split RHS. 2. Remove extraneous attributes.
+DEPTH: L3 (Application)
+
+### TOPIC: Functional Dependency - Example Solving ###
+RULE: Derived dependencies can be computed using given FDs.
+PROCEDURE: 1. Given A → B and B → C. 2. Conclude A → C.
+DEPTH: L3 (Application)
+
+### TOPIC: Functional Dependency - Validation ###
+RULE: A dependency X → Y holds if each value of X maps to exactly one value of Y.
+PROCEDURE: 1. Group tuples by X. 2. Check if Y values are identical.
+DEPTH: L3 (Application)
+
+### TOPIC: Functional Dependency - Violation Detection ###
+RULE: A dependency is violated if the same X value maps to different Y values.
+PROCEDURE: 1. Find tuples with same X. 2. Compare Y values.
+DEPTH: L3 (Application)
+
+### TOPIC: Functional Dependency - Closure Computation ###
+RULE: Closure of X includes all attributes determined using FDs.
+PROCEDURE: 1. Start with X. 2. Apply FDs iteratively.
+DEPTH: L3 (Application)
+
+### TOPIC: Keys - Super Key Identification ###
+RULE: A set is a super key if its closure contains all attributes.
+PROCEDURE: 1. Compute closure. 2. Check if all attributes are included.
+DEPTH: L3 (Application)
+
+### TOPIC: Keys - Super Key Redundancy Check ###
+RULE: A super key may contain unnecessary attributes.
+PROCEDURE: 1. Remove attribute. 2. Check if still super key.
+DEPTH: L3 (Application)
+
+### TOPIC: Keys - Candidate Key Identification ###
+RULE: A candidate key is a minimal super key.
+PROCEDURE: 1. Find super keys. 2. Remove redundant attributes.
+DEPTH: L3 (Application)
+
+### TOPIC: Keys - Candidate Key Validation ###
+RULE: Closure of candidate key must include all attributes.
+PROCEDURE: 1. Compute closure. 2. Verify completeness.
+DEPTH: L3 (Application)
+
+### TOPIC: Keys - Primary Key Selection ###
+RULE: A primary key is chosen from candidate keys.
+PROCEDURE: 1. Identify candidate keys. 2. Select one.
+DEPTH: L3 (Application)
+
+### TOPIC: Keys - Primary Key Validation ###
+RULE: Primary key must uniquely identify tuples.
+PROCEDURE: 1. Check uniqueness. 2. Ensure no duplicates.
+DEPTH: L3 (Application)
+
+### TOPIC: Keys - Foreign Key Validation ###
+RULE: Foreign key must match primary key or be null.
+PROCEDURE: 1. Identify FK values. 2. Match with PK.
+DEPTH: L3 (Application)
+
+### TOPIC: Keys - Referential Integrity Check ###
+RULE: FK violation occurs if referenced value does not exist.
+PROCEDURE: 1. Compare FK table. 2. Validate references.
+DEPTH: L3 (Application)
+
+### TOPIC: Normalization - 1NF Atomicity Check ###
+RULE: A relation is in 1NF if all attributes are atomic.
+PROCEDURE: 1. Identify multi-valued attributes. 2. Convert to atomic.
+DEPTH: L3 (Application)
+
+### TOPIC: Normalization - 1NF Violation Detection ###
+RULE: Multiple values in a single cell violate 1NF.
+PROCEDURE: 1. Scan rows. 2. Detect repeating groups.
+DEPTH: L3 (Application)
+
+### TOPIC: Normalization - 2NF Partial Dependency Detection ###
+RULE: A dependency is partial if non-prime attribute depends on part of candidate key.
+PROCEDURE: 1. Identify composite key. 2. Check subset dependency.
+DEPTH: L3 (Application)
+
+### TOPIC: Normalization - 2NF Conversion ###
+RULE: Remove partial dependencies to achieve 2NF.
+PROCEDURE: 1. Decompose relation. 2. Separate dependent attributes.
+DEPTH: L3 (Application)
+
+### TOPIC: Normalization - 3NF Transitive Dependency Detection ###
+RULE: A dependency is transitive if X → Y and Y → Z.
+PROCEDURE: 1. Identify indirect dependencies. 2. Check chains.
+DEPTH: L3 (Application)
+
+### TOPIC: Normalization - 3NF Validation ###
+RULE: For X → Y, X must be super key or Y must be prime.
+PROCEDURE: 1. List FDs. 2. Verify condition.
+DEPTH: L3 (Application)
+
+### TOPIC: Normalization - BCNF Violation Detection ###
+RULE: BCNF is violated if determinant is not a super key.
+PROCEDURE: 1. Identify FDs. 2. Check LHS closure.
+DEPTH: L3 (Application)
+
+### TOPIC: Normalization - BCNF Decomposition ###
+RULE: Decompose relation to satisfy BCNF.
+PROCEDURE: 1. Identify violating FD. 2. Split relation.
+DEPTH: L3 (Application)
+
+### TOPIC: Functional Dependency - Closure Computation ###
+RULE: Closure determines all reachable attributes.
+PROCEDURE: 1. Start with attribute set. 2. Apply FDs iteratively.
+DEPTH: L3 (Application)
+
+### TOPIC: Functional Dependency - Closure-based Key Check ###
+RULE: If closure contains all attributes → super key.
+PROCEDURE: 1. Compute closure. 2. Verify completeness.
+DEPTH: L3 (Application)
+
+### TOPIC: Decomposition - Lossless Join Check ###
+RULE: Decomposition is lossless if common attribute is key.
+PROCEDURE: 1. Identify intersection. 2. Check key property.
+DEPTH: L3 (Application)
+
+### TOPIC: Decomposition - Lossless Validation ###
+RULE: Join should not create spurious tuples.
+PROCEDURE: 1. Join tables. 2. Compare with original.
+DEPTH: L3 (Application)
+
+### TOPIC: Functional Dependency - Minimal Cover Creation ###
+RULE: Minimal cover removes redundant dependencies.
+PROCEDURE: 1. Split RHS. 2. Remove redundancy.
+DEPTH: L3 (Application)
+
+### TOPIC: Functional Dependency - Extraneous Attribute Removal ###
+RULE: Attribute is extraneous if removable without changing closure.
+PROCEDURE: 1. Remove attribute. 2. Compare closure.
+DEPTH: L3 (Application)

@@ -1,0 +1,14 @@
+# Core Vector Database and Math
+faiss-cpu>=1.8.0
+numpy>=1.26.0
+
+# Embedding Model and RAG Support
+sentence-transformers>=2.7.0
+huggingface_hub>=0.20.0
+torch>=2.0.1
+
+# LLM Interaction
+ollama>=0.1.6
+
+# Utilities and Data Handling
+json5>=0.9.14
