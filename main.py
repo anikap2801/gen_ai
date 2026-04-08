@@ -89,20 +89,25 @@ def run_pipeline():
             selected_q["options"]
         )
 
-        print("\n🔍 Processing...\n")
-        print(f"📌 Selected Question:\n{full_question}\n")
+        print("\n" + "="*70)
+        print("📌 SELECTED QUESTION")
+        print("="*70)
+        print(full_question)
 
         # Agent 1: Question Analyzer (Extract cognitive level from question data)
         q_level = extract_question_level(selected_q)
-        print(f"🧠 Question Cognitive Level (from assessment data):\n{q_level}\n")
+        print(f"\n🧠 Question Level: {q_level}\n")
 
         # Agent 2: Retriever
         retrieved_context = retrieve_context(selected_q)
-        print(f"📚 Retrieved Context:\n{retrieved_context[:300]}...\n")
+        print("📚 Retrieved Study Material:")
+        print("-"*70)
+        print(retrieved_context)
+        print("-"*70)
 
         # Agent 3: Preparation Analyzer
         prep_level = analyze_preparation(client, retrieved_context)
-        print(f"📊 Preparation Material Level:\n{prep_level}\n")
+        print(f"\n📊 Material Cognitive Level: {prep_level}\n")
 
         # Agent 4: Gap Reasoner
         report = generate_gap_report(
@@ -110,14 +115,22 @@ def run_pipeline():
             full_question,
             q_level,
             prep_level,
-            retrieved_context,
-            selected_q["correct_answer"]
+            retrieved_context
         )
 
-        print("🧩 Final Analysis:")
+        print("🧩 GAP ANALYSIS REPORT")
+        print("="*70)
         print(report)
+        print("="*70)
 
-        print("\n" + "="*60 + "\n")
+        continue_choice = input("\nAnalyze another question? (y/n): ").strip().lower()
+        if continue_choice != 'y':
+            print("\nThank you for using Cognitive Gap Analysis System!")
+            break
+
+
+if __name__ == "__main__":
+    run_pipeline()
 
 
 if __name__ == "__main__":
