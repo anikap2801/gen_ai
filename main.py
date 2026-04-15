@@ -83,7 +83,7 @@ def run_pipeline():
 
         selected_q = questions[selected_idx]
 
-        # ✅ Format MCQ properly
+        #  Format MCQ properly
         full_question = format_mcq(
             selected_q["question"],
             selected_q["options"]

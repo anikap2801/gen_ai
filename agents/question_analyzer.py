@@ -9,7 +9,7 @@ def extract_question_level(question_data):
 
 def analyze_question(llm_client, question_text):
     """
-    Analyze the question text only for understanding.
+    Analyze the question text only for unders tanding.
     This is supplementary - the main level comes from extract_question_level().
     """
     prompt = f"""
